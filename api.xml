@@ -1,0 +1,3400 @@
+<!-- This file can be parsed by haxe.rtti.XmlParser -->
+<haxe>
+	<class path="Array" params="T" file="D:\Projects\shiroTools\haxe\std/Array.hx" extern="1">
+		<length public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>The length of `this` Array.</haxe_doc>
+		</length>
+		<concat public="1" set="method">
+			<f a="a">
+				<c path="Array"><c path="Array.T"/></c>
+				<c path="Array"><c path="Array.T"/></c>
+			</f>
+			<haxe_doc>Returns a new Array by appending the elements of `a` to the elements of
+		`this` Array.
+
+		This operation does not modify `this` Array.
+
+		If `a` is the empty Array `[]`, a copy of `this` Array is returned.
+
+		The length of the returned Array is equal to the sum of `this.length`
+		and `a.length`.
+
+		If `a` is `null`, the result is unspecified.</haxe_doc>
+		</concat>
+		<join public="1" set="method">
+			<f a="sep">
+				<c path="String"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns a string representation of `this` Array, with `sep` separating
+		each element.
+
+		The result of this operation is equal to `Std.string(this[0]) + sep +
+		Std.string(this[1]) + sep + ... + sep + Std.string(this[this.length-1])`
+
+		If `this` is the empty Array `[]`, the result is the empty String `""`.
+		If `this` has exactly one element, the result is equal to a call to
+		`Std.string(this[0])`.
+
+		If `sep` is null, the result is unspecified.</haxe_doc>
+		</join>
+		<pop public="1" set="method">
+			<f a=""><x path="Null"><c path="Array.T"/></x></f>
+			<haxe_doc>Removes the last element of `this` Array and returns it.
+
+		This operation modifies `this` Array in place.
+
+		If `this` has at least one element, `this.length` will decrease by 1.
+
+		If `this` is the empty Array `[]`, null is returned and the length
+		remains 0.</haxe_doc>
+		</pop>
+		<push public="1" set="method">
+			<f a="x">
+				<c path="Array.T"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Adds the element `x` at the end of `this` Array and returns the new
+		length of `this` Array.
+
+		This operation modifies `this` Array in place.
+
+		`this.length` increases by 1.</haxe_doc>
+		</push>
+		<reverse public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc><![CDATA[Reverse the order of elements of `this` Array.
+
+		This operation modifies `this` Array in place.
+
+		If `this.length < 2`, `this` remains unchanged.]]></haxe_doc>
+		</reverse>
+		<shift public="1" set="method">
+			<f a=""><x path="Null"><c path="Array.T"/></x></f>
+			<haxe_doc>Removes the first element of `this` Array and returns it.
+
+		This operation modifies `this` Array in place.
+
+		If `this` has at least one element, `this`.length and the index of each
+		remaining element is decreased by 1.
+
+		If `this` is the empty Array `[]`, `null` is returned and the length
+		remains 0.</haxe_doc>
+		</shift>
+		<slice public="1" set="method">
+			<f a="pos:?end">
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="Array"><c path="Array.T"/></c>
+			</f>
+			<haxe_doc>Creates a shallow copy of the range of `this` Array, starting at and
+		including `pos`, up to but not including `end`.
+
+		This operation does not modify `this` Array.
+
+		The elements are not copied and retain their identity.
+
+		If `end` is omitted or exceeds `this.length`, it defaults to the end of
+		`this` Array.
+
+		If `pos` or `end` are negative, their offsets are calculated from the
+		end of `this` Array by `this.length + pos` and `this.length + end`
+		respectively. If this yields a negative value, 0 is used instead.
+
+		If `pos` exceeds `this.length` or if `end` is less than or equals
+		`pos`, the result is `[]`.</haxe_doc>
+		</slice>
+		<sort public="1" set="method">
+			<f a="f">
+				<f a=":">
+					<c path="Array.T"/>
+					<c path="Array.T"/>
+					<x path="Int"/>
+				</f>
+				<x path="Void"/>
+			</f>
+			<haxe_doc><![CDATA[Sorts `this` Array according to the comparison function `f`, where
+		`f(x,y)` returns 0 if x == y, a positive Int if x > y and a
+		negative Int if x < y.
+
+		This operation modifies `this` Array in place.
+
+		The sort operation is not guaranteed to be stable, which means that the
+		order of equal elements may not be retained. For a stable Array sorting
+		algorithm, `haxe.ds.ArraySort.sort()` can be used instead.
+
+		If `f` is null, the result is unspecified.]]></haxe_doc>
+		</sort>
+		<splice public="1" set="method">
+			<f a="pos:len">
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="Array"><c path="Array.T"/></c>
+			</f>
+			<haxe_doc><![CDATA[Removes `len` elements from `this` Array, starting at and including
+		`pos`, an returns them.
+
+		This operation modifies `this` Array in place.
+
+		If `len` is < 0 or `pos` exceeds `this`.length, an empty Array [] is
+		returned and `this` Array is unchanged.
+
+		If `pos` is negative, its value is calculated from the end	of `this`
+		Array by `this.length + pos`. If this yields a negative value, 0 is
+		used instead.
+
+		If the sum of the resulting values for `len` and `pos` exceed
+		`this.length`, this operation will affect the elements from `pos` to the
+		end of `this` Array.
+
+		The length of the returned Array is equal to the new length of `this`
+		Array subtracted from the original length of `this` Array. In other
+		words, each element of the original `this` Array either remains in
+		`this` Array or becomes an element of the returned Array.]]></haxe_doc>
+		</splice>
+		<toString public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>Returns a string representation of `this` Array.
+
+		The result will include the individual elements' String representations
+		separated by comma. The enclosing [ ] may be missing on some platforms,
+		use `Std.string()` to get a String representation that is consistent
+		across platforms.</haxe_doc>
+		</toString>
+		<unshift public="1" set="method">
+			<f a="x">
+				<c path="Array.T"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Adds the element `x` at the start of `this` Array.
+
+		This operation modifies `this` Array in place.
+
+		`this.length` and the index of each Array element increases by 1.</haxe_doc>
+		</unshift>
+		<insert public="1" set="method">
+			<f a="pos:x">
+				<x path="Int"/>
+				<c path="Array.T"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Inserts the element `x` at the position `pos`.
+
+		This operation modifies `this` Array in place.
+
+		The offset is calculated like so:
+
+		- If `pos` exceeds `this.length`, the offset is `this.length`.
+		- If `pos` is negative, the offset is calculated from the end of `this`
+		  Array, i.e. `this.length + pos`. If this yields a negative value, the
+		  offset is 0.
+		- Otherwise, the offset is `pos`.
+
+		If the resulting offset does not exceed `this.length`, all elements from
+		and including that offset to the end of `this` Array are moved one index
+		ahead.</haxe_doc>
+		</insert>
+		<remove public="1" set="method">
+			<f a="x">
+				<c path="Array.T"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Removes the first occurrence of `x` in `this` Array.
+
+		This operation modifies `this` Array in place.
+
+		If `x` is found by checking standard equality, it is removed from `this`
+		Array and all following elements are reindexed accordingly. The function
+		then returns true.
+
+		If `x` is not found, `this` Array is not changed and the function
+		returns false.</haxe_doc>
+		</remove>
+		<indexOf public="1" set="method">
+			<f a="x:?fromIndex">
+				<c path="Array.T"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns position of the first occurrence of `x` in `this` Array, searching front to back.
+
+		If `x` is found by checking standard equality, the function returns its index.
+
+		If `x` is not found, the function returns -1.
+
+		If `fromIndex` is specified, it will be used as the starting index to search from,
+		otherwise search starts with zero index. If it is negative, it will be taken as the
+		offset from the end of `this` Array to compute the starting index. If given or computed
+		starting index is less than 0, the whole array will be searched, if it is greater than
+		or equal to the length of `this` Array, the function returns -1.</haxe_doc>
+		</indexOf>
+		<lastIndexOf public="1" set="method">
+			<f a="x:?fromIndex">
+				<c path="Array.T"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns position of the last occurrence of `x` in `this` Array, searching back to front.
+
+		If `x` is found by checking standard equality, the function returns its index.
+
+		If `x` is not found, the function returns -1.
+
+		If `fromIndex` is specified, it will be used as the starting index to search from,
+		otherwise search starts with the last element index. If it is negative, it will be
+		taken as the offset from the end of `this` Array to compute the starting index. If
+		given or computed starting index is greater than or equal to the length of `this` Array,
+		the whole array will be searched, if it is less than 0, the function returns -1.</haxe_doc>
+		</lastIndexOf>
+		<copy public="1" set="method">
+			<f a=""><c path="Array"><c path="Array.T"/></c></f>
+			<haxe_doc>Returns a shallow copy of `this` Array.
+
+		The elements are not copied and retain their identity, so
+		`a[i] == a.copy()[i]` is true for any valid `i`. However,
+		`a == a.copy()` is always false.</haxe_doc>
+		</copy>
+		<iterator public="1" get="inline" set="null" line="268">
+			<f a=""><c path="haxe.iterators.ArrayIterator"><c path="Array.T"/></c></f>
+			<meta><m n=":runtime"/></meta>
+			<haxe_doc>Returns an iterator of the Array values.</haxe_doc>
+		</iterator>
+		<map public="1" params="S" get="inline" set="null" line="279">
+			<f a="f">
+				<f a="">
+					<c path="Array.T"/>
+					<c path="map.S"/>
+				</f>
+				<c path="Array"><c path="map.S"/></c>
+			</f>
+			<meta><m n=":runtime"/></meta>
+			<haxe_doc>Creates a new Array by applying function `f` to all elements of `this`.
+
+		The order of elements is preserved.
+
+		If `f` is null, the result is unspecified.</haxe_doc>
+		</map>
+		<filter public="1" get="inline" set="null" line="297">
+			<f a="f">
+				<f a="">
+					<c path="Array.T"/>
+					<x path="Bool"/>
+				</f>
+				<c path="Array"><c path="Array.T"/></c>
+			</f>
+			<meta><m n=":runtime"/></meta>
+			<haxe_doc>Returns an Array containing those elements of `this` for which `f`
+		returned true.
+
+		The individual elements are not duplicated and retain their identity.
+
+		If `f` is null, the result is unspecified.</haxe_doc>
+		</filter>
+		<resize public="1" set="method">
+			<f a="len">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Set the length of the Array.
+
+		If `len` is shorter than the array's current size, the last
+		`length - len` elements will be removed. If `len` is longer, the Array
+		will be extended, with new elements set to a target-specific default
+		value:
+
+		- always null on dynamic targets
+		- 0, 0.0 or false for Int, Float and Bool respectively on static targets
+		- null for other types on static targets</haxe_doc>
+		</resize>
+		<new public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>Creates a new Array.</haxe_doc>
+		</new>
+		<haxe_doc>An Array is a storage for values. You can access it using indexes or
+	with its API.
+
+	@see https://haxe.org/manual/std-Array.html
+	@see https://haxe.org/manual/lf-array-comprehension.html</haxe_doc>
+	</class>
+	<abstract path="Class" params="T" file="D:\Projects\shiroTools\haxe\std/Class.hx">
+		<this><x path="Class"><c path="Class.T"/></x></this>
+		<haxe_doc>An abstract type that represents a Class.
+
+	See `Type` for the Haxe Reflection API.
+
+	@see https://haxe.org/manual/types-class-instance.html</haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<abstract path="Enum" params="T" file="D:\Projects\shiroTools\haxe\std/Enum.hx">
+		<this><x path="Enum"><c path="Enum.T"/></x></this>
+		<haxe_doc>An abstract type that represents an Enum type.
+
+	The corresponding enum instance type is `EnumValue`.
+
+	See `Type` for the Haxe Reflection API.
+
+	@see https://haxe.org/manual/types-enum-instance.html</haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<abstract path="EnumValue" params="" file="D:\Projects\shiroTools\haxe\std/EnumValue.hx">
+		<this><x path="EnumValue"/></this>
+		<haxe_doc>An abstract type that represents any enum value.
+	See `Type` for the Haxe Reflection API.
+
+	@see https://haxe.org/manual/types-enum-instance.html</haxe_doc>
+		<meta><m n=":coreType"/></meta>
+		<impl><class path="_EnumValue.EnumValue_Impl_" params="" file="D:\Projects\shiroTools\haxe\std/EnumValue.hx" private="1" module="EnumValue"><meta><m n=":keep"/></meta></class></impl>
+	</abstract>
+	<typedef path="NetArray" params="T" file="ScriptDoc.hx" module="ScriptDoc">
+		<a>
+			<length set="null"><x path="Int"/></length>
+			<iterator set="method"><f a=""><t path="Iterator"><c path="NetArray.T"/></t></f></iterator>
+		</a>
+		<haxe_doc>* Serialized array specific to the game.</haxe_doc>
+	</typedef>
+	<typedef path="NetMap" params="K:V" file="ScriptDoc.hx" module="ScriptDoc">
+		<a><iterator set="method"><f a=""><t path="Iterator"><c path="NetMap.V"/></t></f></iterator></a>
+		<haxe_doc>* Serialized map specific to the game.</haxe_doc>
+	</typedef>
+	<abstract path="ResourceKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the resources the players can produce.
+ * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.ResourceKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.ResourceKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="UnitKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the unit existing units, including warchiefs or foes.
+ * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.UnitKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.UnitKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="BuildingKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the existing buildings, including natural resources or victory buildings.
+ * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.BuildingKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.BuildingKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="TechKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the techs the player can unlock.
+ * Full list in the database</haxe_doc>
+		<impl><class path="_ScriptDoc.TechKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.TechKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="AbilityKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the passive or usable abilities for some entities.
+ * Full list in the database</haxe_doc>
+		<impl><class path="_ScriptDoc.AbilityKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.AbilityKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="ClanKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the clan available clan.
+ * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.ClanKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.ClanKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="UiSfxKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the SFX used by the UI.
+  * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.UiSfxKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.UiSfxKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="EventKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the in-game event that can happen any time of the year.
+ * Full list in the database.</haxe_doc>
+		<impl><class path="_ScriptDoc.EventKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.EventKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="BiomeKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the environments for a map
+ * Full list in the database</haxe_doc>
+		<impl><class path="_ScriptDoc.BiomeKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.BiomeKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="RuleKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the rules you can set for a game. They are used in Conquest mode.
+ * Full list in the database</haxe_doc>
+		<impl><class path="_ScriptDoc.RuleKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.RuleKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="BonusKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* One of the bonuses you can give to players. They are used in Conquest mode.
+ * Full list in the database</haxe_doc>
+		<impl><class path="_ScriptDoc.BonusKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.BonusKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<abstract path="BannerKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<this><c path="String"/></this>
+		<haxe_doc>* Dialog informations concerning the representation of a clan's Bannerman.
+  * Used to display a campaign bannerman's portrait during dialogs.</haxe_doc>
+		<impl><class path="_ScriptDoc.BannerKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/></impl>
+	</abstract>
+	<class path="_ScriptDoc.BannerKind_Impl_" params="" file="ScriptDoc.hx" private="1" module="ScriptDoc" extern="1"/>
+	<enum path="VictoryKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<VMilitary/>
+		<VFame/>
+		<VMoney/>
+		<VLore/>
+		<VYggdrasil/>
+		<VOdinSword/>
+		<VHelheim/>
+		<haxe_doc>* global Victory</haxe_doc>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<enum path="PlayerFlag" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<NoAttackPlayers/>
+		<NoAttackFoes/>
+		<NoExpand/>
+		<NoBuilding/>
+		<NoAssign/>
+		<NoBuild/>
+		<NoRepair/>
+		<NoZoneMove/>
+		<NoFeast/>
+		<NoUpgrade/>
+		<NoTechLearn/>
+		<NoToolImprove/>
+		<NoTrade/>
+		<NoMilitary/>
+		<NoTower/>
+		<NoHero/>
+		<NoDraugPortal/>
+		<haxe_doc>* Player flags for IA control.</haxe_doc>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<enum path="BonusValId" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<Value/>
+		<Value2/>
+		<Value3/>
+		<Value4/>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<enum path="FontKind" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<Default/>
+		<Italic/>
+		<Bold/>
+		<Button/>
+		<SmallTitle/>
+		<Title/>
+		<BigTitle/>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<enum path="PingFlagType" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<Team/>
+		<InterestPoint/>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<typedef path="DialogOptions" params="" file="ScriptDoc.hx" module="ScriptDoc"><a>
+	<who>
+		<x path="Null"><x path="BannerKind"/></x>
+		<meta><m n=":optional"/></meta>
+	</who>
+	<textSize>
+		<x path="Null"><e path="FontKind"/></x>
+		<meta><m n=":optional"/></meta>
+	</textSize>
+	<speed>
+		<x path="Null"><x path="Float"/></x>
+		<meta><m n=":optional"/></meta>
+	</speed>
+	<name>
+		<x path="Null"><c path="String"/></x>
+		<meta><m n=":optional"/></meta>
+	</name>
+	<isRight>
+		<x path="Null"><x path="Bool"/></x>
+		<meta><m n=":optional"/></meta>
+	</isRight>
+	<color>
+		<x path="Null"><x path="Int"/></x>
+		<meta><m n=":optional"/></meta>
+	</color>
+</a></typedef>
+	<class path="ScriptApi" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<me public="1" set="method">
+			<f a=""><c path="Player"/></f>
+			<haxe_doc>* Return the player on the local device, either the main player
+	 * during a single game or the local player on a multiplayer game.
+	 * @return ent.Player</haxe_doc>
+		</me>
+		<debug public="1" set="method">
+			<f a="s:?color">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Print a string on the ingame console.
+	 * @param s The string to print
+	 * @param color The text color as an hexadecimal value (ex : 0xFF4040)</haxe_doc>
+		</debug>
+		<isHost public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Tells if the script is executed on the Host in multiplayer, a.k.a is the one managing the gameplay logic for the clients.
+	 * Always true for offline scripts.
+	 * @return Bool</haxe_doc>
+		</isHost>
+		<addRule public="1" set="method">
+			<f a="id">
+				<x path="RuleKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Add a Conquest rule to the game.
+	 * @param id</haxe_doc>
+		</addRule>
+		<removeRule public="1" set="method">
+			<f a="id">
+				<x path="RuleKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Remove a Conquest rule from the game.
+	 * @param id</haxe_doc>
+		</removeRule>
+		<hasRule public="1" set="method">
+			<f a="id">
+				<x path="RuleKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Check if the game has the given Conquest rule.
+	 * @param id</haxe_doc>
+		</hasRule>
+		<hasAnyRule public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Returns true if the game has any Conquest rule.
+	 * @return Bool</haxe_doc>
+		</hasAnyRule>
+		<getZone public="1" set="method">
+			<f a="id">
+				<x path="Int"/>
+				<c path="Zone"/>
+			</f>
+			<haxe_doc>* Get a zone by its id.
+	 * @param id
+	 * @return Zone</haxe_doc>
+		</getZone>
+		<getPlayer public="1" set="method">
+			<f a="name">
+				<c path="String"/>
+				<c path="Player"/>
+			</f>
+			<haxe_doc>* Get a player by its clan identifier or ingame name
+	 * @param name
+	 * @return Player</haxe_doc>
+		</getPlayer>
+		<getFaction public="1" set="method">
+			<f a="name">
+				<c path="String"/>
+				<c path="Faction"/>
+			</f>
+			<haxe_doc>* Get a faction by its name. To use to retrieve neutral factions.
+	 * @param name
+	 * @return Faction</haxe_doc>
+		</getFaction>
+		<setPause public="1" set="method">
+			<f a="b">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Pause or unpause the game locally.
+	 * This is a separate behaviour from multiplayer pause.
+	 * @param b</haxe_doc>
+		</setPause>
+		<resetState public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Reset the time to the beginning of the current year, just after winter.</haxe_doc>
+		</resetState>
+		<resetRelations public="1" set="method">
+			<f a="p">
+				<c path="Player"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Reset all the relations of this player.
+	 * @param p</haxe_doc>
+		</resetRelations>
+		<setAlly public="1" set="method">
+			<f a="player:leader">
+				<c path="Player"/>
+				<c path="Player"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the alliance of a player.
+	 * An alliance is represented by its leader. Allies needs to have a common leader.
+	 * @param player
+	 * @param leader</haxe_doc>
+		</setAlly>
+		<allowTrade public="1" set="method">
+			<f a="from:with:allow">
+				<c path="Player"/>
+				<c path="Faction"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Allow or forbid trade from a player to a faction.
+	 * @param from
+	 * @param with
+	 * @param allow true to allow, false to forbid.</haxe_doc>
+		</allowTrade>
+		<killAllUnits public="1" set="method">
+			<f a="zones">
+				<c path="Array"><c path="Zone"/></c>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Kill all the units and foes from the given zones.
+	 * @param zones</haxe_doc>
+		</killAllUnits>
+		<blackWindow public="1" set="method">
+			<f a="b:?duration" v=":1.">
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ duration : 1. }</e></m></meta>
+			<haxe_doc>* Fade the screen to or from black with a duration.
+	 * @param b true to show a black screen, false to show the game.
+	 * @param duration [Optional] The fade duration in seconds. A duration of 0 immediately show the black screen. Default at 1.</haxe_doc>
+		</blackWindow>
+		<setCameraPos public="1" set="method">
+			<f a="x:y">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Immediately set the camera's position to the given coordinates.
+	 * @param x
+	 * @param y</haxe_doc>
+		</setCameraPos>
+		<wait public="1" set="method">
+			<f a="duration">
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [Blocking] Wait a number of seconds before executing the next line.
+	 * @param duration</haxe_doc>
+		</wait>
+		<setZoom public="1" set="method">
+			<f a="coef">
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the zoom of the camera.
+	 * @param coef</haxe_doc>
+		</setZoom>
+		<moveCamera public="1" set="method">
+			<f a="target:?speed">
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [Blocking] Pan the camera to a target's coordinates at a certain speed.
+	 * @param target Target can be an entity or an anonymous structure with a x and y coordinate.
+	 * @param speed [Optional] The speed at which the camera move, in coordinate units per seconds. Default at 3.</haxe_doc>
+		</moveCamera>
+		<setCamera public="1" set="method">
+			<f a="e">
+				<c path="Entity"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Immediately center the camera on a specific entity
+	 * @param e</haxe_doc>
+		</setCamera>
+		<moveCameraDelta public="1" set="method">
+			<f a="dx:dy:?speed">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [Blocking] Pan the camera over time by a set distance on x and y.
+	 * @param dx Pan on x coordinates
+	 * @param dy Pan on y coordinates
+	 * @param speed [Optional] The speed at which the camera move, in coordinate units per second. Default at 1.</haxe_doc>
+		</moveCameraDelta>
+		<sfx public="1" set="method">
+			<f a="name:?volumeScale">
+				<x path="UiSfxKind"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Play one of the sfx defined in the database's uiSfx tab.
+	 * @param name
+	 * @param volumeScale A volume factor, 1 plays the sound as intended, 10 increase the volume tenfold. Default at 1.</haxe_doc>
+		</sfx>
+		<shakeCamera public="1" set="method">
+			<f a="?big" v="false">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ big : false }</e></m></meta>
+			<haxe_doc>* Shake the camera for a short duration, like during an earthquake.
+	 * @param big [Optional] Do we want a bigger shake? Default at false.</haxe_doc>
+		</shakeCamera>
+		<playAnim public="1" set="method">
+			<f a="unit:animName:?backToIdle:?forceLoop" v="::true:false">
+				<c path="Unit"/>
+				<c path="String"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ forceLoop : false, backToIdle : true }</e></m></meta>
+			<haxe_doc>* Have the unit play a specific animation.
+	 * The animation name is a simple action word taken from the animation files.
+	 * One name can regroup multiple animations to be played randomly.
+	 * Some common animation names are :
+	 * action_floor, building, death, drakkar_stand, fear, fishing, forge, heal, hurt, inkeeper, kick, mender_heal, mender_rune, mine, negociation, pickup, plow, pray, run, scout, selling, skald, spawn, stance, stand, standfear, victory, wait, walk, woodcut
+	 * Warchiefs also has :
+	 * agony, aye, submit_cutscene
+	 * @param unit
+	 * @param animName
+	 * @param backToIdle If the anim don't loop, the unit will play the "stand" anim after the specified one.
+	 * @param forceLoop Force the animation to be looped, even if it is not made to be looped.</haxe_doc>
+		</playAnim>
+		<launchAttack public="1" set="method">
+			<f a="units:targetZones:?isRandom">
+				<c path="Array"><c path="Unit"/></c>
+				<c path="Array"><x path="Int"/></c>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* [HostOnly] Tell all the specified units to attack one of the given zones.
+	 * @param units
+	 * @param targetZones The ZoneId of each target zones.
+	 * @param isRandom Set to true to attack the zones in a random order, false, to start by the first one.
+	 * @return Bool True if the units could find a path to attack one of the given zones, else false.</haxe_doc>
+		</launchAttack>
+		<launchAttackPlayer public="1" set="method">
+			<f a="units:player">
+				<c path="Array"><c path="Unit"/></c>
+				<c path="Player"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* [HostOnly] Tell the specified units to attack a player's zone randomly.
+	 * @param units
+	 * @param player
+	 * @return Bool</haxe_doc>
+		</launchAttackPlayer>
+		<noEvent public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Forbid any ingame event (Rats, Earthquake, Blizzard, etc...) to be automatically triggered for the remaining of the game.
+	 * Must be called each launch.</haxe_doc>
+		</noEvent>
+		<toInt public="1" set="method">
+			<f a="v">
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* Convert a float value to an int, removing all decimals
+	 * @param v
+	 * @return Int</haxe_doc>
+		</toInt>
+		<random public="1" set="method">
+			<f a="?max" v="1.">
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>{ max : 1. }</e></m></meta>
+			<haxe_doc>* Generate a random float number between 0. included and max excluded.
+	 * @param max [Optional] The maximum number to random. 1. by default.
+	 * @return Float</haxe_doc>
+		</random>
+		<randomInt public="1" set="method">
+			<f a="?max" v="1">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ max : 1 }</e></m></meta>
+			<haxe_doc>* Generate a random int number between 0 included and max excluded;
+	 * @param max
+	 * @return Int</haxe_doc>
+		</randomInt>
+		<max public="1" set="method">
+			<f a="a:b">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* Get the smaller value from a and b.
+	 * @param a
+	 * @param b
+	 * @return Int</haxe_doc>
+		</max>
+		<min public="1" set="method">
+			<f a="a:b">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* Get the higher value from a and b.
+	 * @param a
+	 * @param b
+	 * @return Int</haxe_doc>
+		</min>
+		<fmax public="1" set="method">
+			<f a="a:b">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the smaller value from a and b.
+	 * @param a
+	 * @param b
+	 * @return Float</haxe_doc>
+		</fmax>
+		<fmin public="1" set="method">
+			<f a="a:b">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the higher value from a and b.
+	 * @param a
+	 * @param b
+	 * @return Float</haxe_doc>
+		</fmin>
+		<pow public="1" set="method">
+			<f a="v:exp">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get a base raised to a power exp.
+	 * @param v
+	 * @param exp
+	 * @return Float</haxe_doc>
+		</pow>
+		<abs public="1" set="method">
+			<f a="v">
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the absolute value of v.
+	 * @param v
+	 * @return Float</haxe_doc>
+		</abs>
+		<defeat public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Immediately make the main player lose the game.
+	 * Will make the Host lose in case of multiplayer.
+	 * Use Player.defeat() for other players.</haxe_doc>
+		</defeat>
+		<customDefeat public="1" set="method">
+			<f a="reason">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Immediately make the main player lose the game with a custom reason.
+	 * Will make the Host lose in case of multiplayer.
+	 * Use Player.customDefeat() for other players.
+	 * @param reason The reason of the defeat.</haxe_doc>
+		</customDefeat>
+		<drakkar public="1" set="method">
+			<f a="owner:targetZone:spawnZone:dx:dy:?units:?speed">
+				<c path="Player"/>
+				<c path="Zone"/>
+				<c path="Zone"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Array"><x path="UnitKind"/></c>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc><![CDATA[* [HostOnly] Spawn a drakkar full of units to unload.
+	 * Example:
+	 * // summon a rather quick drakkar with 3 warriors on board.
+	 * drakkar(player, getZone(103), getZone(105), 8, -4, [Unit.Warrior, Unit.Warrior, Unit.Warrior], 0.2);
+	 * @param owner The owner of the spawned units
+	 * @param targetZone The zone where the drakkar will unload its cargo, preferably a beach.
+	 * @param spawnZone The zone from which the drakkar comes, preferably a high sea zone.
+	 * @param dx Spawn offset on x coordinates
+	 * @param dy Spawn offset on y coordinates
+	 * @param units [Optional] The units to unload. If empty, will unload 4 mercenaries.
+	 * @param speed [Optional] The speed of the drakkar.<br/>Default at 0.05.]]></haxe_doc>
+		</drakkar>
+		<followUnit public="1" set="method">
+			<f a="unit">
+				<c path="Unit"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Make the camera follow a unit. Set to null to stop the follow.
+	 * @param unit</haxe_doc>
+		</followUnit>
+		<shuffleArray public="1" params="T" set="method">
+			<f a="array">
+				<c path="Array"><c path="shuffleArray.T"/></c>
+				<c path="Array"><c path="shuffleArray.T"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Randomly shuffle the content of an array
+	 * @param array
+	 * @return Array<T>]]></haxe_doc>
+		</shuffleArray>
+		<setupUnit public="1" set="method">
+			<f a="zone:owner:type:ox:oy:?tx:?ty">
+				<c path="Zone"/>
+				<c path="Player"/>
+				<x path="UnitKind"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Unit"/>
+			</f>
+			<haxe_doc>* [HostOnly] Create a static unit in a zone. Used for cinematic purposes.
+	 * @param zone The zone the units is created in.
+	 * @param owner The owner of the unit.
+	 * @param type The UnitKind of the unit.
+	 * @param ox The x coordinate of the unit's position.
+	 * @param oy The y coordinates of the unit's position.
+	 * @param tx [Optional] The x coordinates of the direction the unit look at.
+	 * @param ty [Optional] The y coordinates of the direction the unit look at.
+	 * @return Unit</haxe_doc>
+		</setupUnit>
+		<moveUnit public="1" set="method">
+			<f a="unit:dx:dy:?walk" v=":::false">
+				<c path="Unit"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ walk : false }</e></m></meta>
+			<haxe_doc>* Move a unit a certain coordinate offset.
+	 * @param unit
+	 * @param dx The offset on x coordinates.
+	 * @param dy The offset on y coordinates.
+	 * @param walk [Optional] true to have the unit walk instead of running. false by default.</haxe_doc>
+		</moveUnit>
+		<summonWarchief public="1" set="method">
+			<f a="owner:zone:x:y">
+				<c path="Player"/>
+				<c path="Zone"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Unit"/>
+			</f>
+			<haxe_doc>* [HostOnly] Get the main warchief of the current player's clan and move him on the given position.
+	 * If the warchief isn't already created, it will create a new one.
+	 * @param owner
+	 * @param zone
+	 * @param x
+	 * @param y
+	 * @return Unit</haxe_doc>
+		</summonWarchief>
+		<addFoes public="1" set="method">
+			<f a="foes">
+				<c path="Array"><a>
+	<z><x path="Int"/></z>
+	<u><x path="UnitKind"/></u>
+	<nb><x path="Int"/></nb>
+</a></c>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Allow to quickly add a number of foes in a specific zone.
+	 * Example :
+	 * addFoes([
+	 * {z:198, u:Unit.Death, nb:2},		// Add 2 Draugr in zone 198
+	 * {z:201, u.Unit.Wolf, nb:3},		// Add 3 wolves in zone 201
+	 * ]);
+	 * @param foes</haxe_doc>
+		</addFoes>
+		<killFoes public="1" set="method">
+			<f a="arr">
+				<c path="Array"><a>
+	<z><x path="Int"/></z>
+	<u><x path="UnitKind"/></u>
+	<nb><x path="Int"/></nb>
+</a></c>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Allow to quickly remove a number of foes in a specific zone.
+	 * Example :
+	 * addFoes([
+	 * {z:198, u:Unit.Death, nb:2},		// Remove 2 Draugr in zone 198
+	 * {z:201, u.Unit.Wolf, nb:3},		// Remove 3 wolves in zone 201
+	 * ]);
+	 * @param arr</haxe_doc>
+		</killFoes>
+		<tradingWith public="1" set="method">
+			<f a="player:factionName">
+				<c path="Player"/>
+				<c path="String"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tells if the player si trading with the named faction (Giant, Kobold, Myrkalfar, etc...).
+	 * @param player
+	 * @param factionName
+	 * @return Bool</haxe_doc>
+		</tradingWith>
+		<talk public="1" set="method">
+			<f a="text:?options:?focus:?time">
+				<c path="String"/>
+				<t path="DialogOptions"/>
+				<c path="Entity"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [Blocking] Display a dialog box showing text in a fancy manner. Can be decorated with dialog options.
+	 * @param text The dialog to show.
+	 * @param options Options to customize the dialog.
+	 * @param focus The unit to focus on when the dialog is on.
+	 * @param time A delay in seconds just after focusing the unit.</haxe_doc>
+		</talk>
+	</class>
+	<class path="Entity" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<x public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The X coordinate of the entity</haxe_doc>
+		</x>
+		<y public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The Y coordinate of the entity</haxe_doc>
+		</y>
+		<z public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The Z (height) coordinate of the entity</haxe_doc>
+		</z>
+		<zone public="1">
+			<c path="Zone"/>
+			<haxe_doc>* [HostOnly] The zone where the entity is.
+	 * Updated during unit movements.</haxe_doc>
+		</zone>
+		<setPosition public="1" set="method">
+			<f a="x:y">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Set the position of the entity on the X and Y axis, figuring out the Z relative to the terrain's height.
+	 * @param x
+	 * @param y</haxe_doc>
+		</setPosition>
+		<orientToPos public="1" set="method">
+			<f a="x:y">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Immediately turn the entity toward coordinates.
+	 * @param x
+	 * @param y</haxe_doc>
+		</orientToPos>
+		<orientToTarget public="1" set="method">
+			<f a="target">
+				<c path="Entity"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Immediately turn the entity toward a given target.
+	 * @param target</haxe_doc>
+		</orientToTarget>
+		<sfx public="1" set="method">
+			<f a="name:?volumeScale">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Play a sfx from the resource pack. The sfx will be localised in the 3D world.
+	 * @param name
+	 * @param [Optional] volumeScale A volume factor, 1 plays the sound as intended, 10 increase the volume tenfold. Default at 1.</haxe_doc>
+		</sfx>
+		<isRemoved public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Check if an entity have already been removed during the current update frame.
+	  * @return Bool</haxe_doc>
+		</isRemoved>
+		<haxe_doc>* Represent any existing object in the 3D world of Northgard.</haxe_doc>
+	</class>
+	<class path="Zone" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="Entity"/>
+		<id public="1">
+			<x path="Int"/>
+			<haxe_doc>* [HostOnly] The id of the zone, can be retrieved using the map editor.</haxe_doc>
+		</id>
+		<allowScouting public="1">
+			<x path="Bool"/>
+			<haxe_doc>* Allow the player to discover this zone with a scout.</haxe_doc>
+		</allowScouting>
+		<next public="1" set="null">
+			<c path="Array"><c path="Zone"/></c>
+			<haxe_doc>* The list of neighbor zones accessible from this one.</haxe_doc>
+		</next>
+		<units public="1" set="null">
+			<c path="Array"><c path="Unit"/></c>
+			<haxe_doc>* All the active units in the zone. Include foes like draugar or wolfs.</haxe_doc>
+		</units>
+		<team public="1" set="null">
+			<c path="Faction"/>
+			<haxe_doc>* The team owning this zone.</haxe_doc>
+		</team>
+		<buildings public="1" set="null">
+			<c path="Array"><c path="Building"/></c>
+			<haxe_doc>* All the buildings in the zone.
+	 * Include player built buildings and gameplay buildings like Wolf Den or Swamp, but not decorative rocks, trees or grasses.</haxe_doc>
+		</buildings>
+		<owner public="1">
+			<c path="Player"/>
+			<haxe_doc>* [HostOnly] The current owner of a zone.</haxe_doc>
+		</owner>
+		<colonize public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The progress of a zone colonisation, if the zone is neutral or contested. Goes from 0 to 1, at which the zone owner become the owner referenced by colonizeBy.</haxe_doc>
+		</colonize>
+		<colonizeBy public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The player current attacking the zone, if the zone is neutral or contested.</haxe_doc>
+		</colonizeBy>
+		<maxBuildings public="1">
+			<x path="Int"/>
+			<haxe_doc>* [HostOnly] The maximum number of building a zone can hold, excluding the additional buildings from a developped zone or from Kraken's Shallow Waters</haxe_doc>
+		</maxBuildings>
+		<addUnit public="1" set="method">
+			<f a="kind:?nb:?owner:?withSpawnSfx:?modelsNb:?radiusMax">
+				<x path="UnitKind"/>
+				<x path="Int"/>
+				<c path="Player"/>
+				<x path="Bool"/>
+				<c path="Array"><x path="Int"/></c>
+				<x path="Float"/>
+				<c path="Array"><c path="Unit"/></c>
+			</f>
+			<haxe_doc>* [HostOnly] Add a unit of a certain UnitKind at a random position in the zone.
+	 * @param kind The kind of unit to add.
+	 * @param nb [Optional] A number of units to spawn at once. Spawn one by default.
+	 * @param owner [Optional] The units' owner. Is the main player by default.
+	 * @param withSpawnSfx [Optional] Set at true to play the spawn sound effect. False by default.
+	 * @param modelsNb [Optional] An array of variant ids to change the visuals of each new units with variants.
+	 * @param rayMax [Optional] Constrain the spawn position inside a radius from the center of the zone.</haxe_doc>
+		</addUnit>
+		<getUnit public="1" set="method">
+			<f a="kind">
+				<x path="UnitKind"/>
+				<c path="Unit"/>
+			</f>
+			<haxe_doc>* Get the unit of a given kind which entered the zone first.
+	 * @param kind
+	 * @return Unit</haxe_doc>
+		</getUnit>
+		<takeControl public="1" set="method">
+			<f a="newOwner:?alert" v=":true">
+				<c path="Player"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ alert : true }</e></m></meta>
+			<haxe_doc>* [HostOnly] Immediately give the control of the zone to the given player.
+	 * @param newOwner
+	 * @param alert [Optional] Do we generate an alert to the player as he lose or gain a zone.</haxe_doc>
+		</takeControl>
+		<getDepositResCount public="1" set="method">
+			<f a="res">
+				<x path="ResourceKind"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Tell the quantity of a specific ore resource is available in the whole zone.
+	 * @param res The kind of resource we want to count. Only works with an ore resource like Stone, Iron, RimeSteel or Gemstone.
+	 * @return Float</haxe_doc>
+		</getDepositResCount>
+		<haxe_doc>* A zone represent a patch of land in Northgard that can be colonized and exploited by the players.
+ * Any entity is located in</haxe_doc>
+		<createBuilding public="1" set="method">
+			<f a="kind:randomSeed:">
+				<x path="BuildingKind"/>
+				<x path="Bool"/>
+				<c path="Building"/>
+			</f>
+			<haxe_doc>* Add a building to the zone at a random location.
+				* This doesn't add grass or dirt around the building.
+				* @param kind The kind of building you want to add.
+				* @param randomSeed Using a random seed ensure the building won't be placed twice at the same position between two games.
+				* @return Building
+			</haxe_doc>
+		</createBuilding>
+	</class>
+	<enum path="OStatus" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<Empty><haxe_doc>* Default status, display an empty checkbox.</haxe_doc></Empty>
+		<Done><haxe_doc>* Display a green checked checkbox.</haxe_doc></Done>
+		<Missed><haxe_doc>* Display a red crossed checkbox.</haxe_doc></Missed>
+		<haxe_doc>* All the statuses an objective can take.</haxe_doc>
+		<meta><m n=":flatEnum"/></meta>
+	</enum>
+	<typedef path="ObjectiveParams" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<a>
+			<visible>
+				<x path="Null"><x path="Bool"/></x>
+				<meta><m n=":optional"/></meta>
+			</visible>
+			<val>
+				<x path="Null"><x path="Float"/></x>
+				<meta><m n=":optional"/></meta>
+			</val>
+			<status>
+				<x path="Null"><e path="OStatus"/></x>
+				<meta><m n=":optional"/></meta>
+			</status>
+			<showProgressBar>
+				<x path="Null"><x path="Bool"/></x>
+				<meta><m n=":optional"/></meta>
+			</showProgressBar>
+			<showOtherPlayers>
+				<x path="Null"><x path="Bool"/></x>
+				<meta><m n=":optional"/></meta>
+			</showOtherPlayers>
+			<goalVal>
+				<x path="Null"><x path="Float"/></x>
+				<meta><m n=":optional"/></meta>
+			</goalVal>
+			<autoCheck>
+				<x path="Null"><x path="Bool"/></x>
+				<meta><m n=":optional"/></meta>
+			</autoCheck>
+		</a>
+		<haxe_doc>* A list of optional parameters for your objective.</haxe_doc>
+	</typedef>
+	<typedef path="ButtonOptions" params="" file="ScriptDoc.hx" module="ScriptDoc"><a>
+	<name><c path="String"/></name>
+	<action><c path="String"/></action>
+</a></typedef>
+	<class path="ScriptObjectives" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<title public="1">
+			<c path="String"/>
+			<haxe_doc>* The title visible in the Victory window.</haxe_doc>
+		</title>
+		<summary public="1">
+			<c path="String"/>
+			<haxe_doc>* The summary of your scenario/mission in the Victory window.</haxe_doc>
+		</summary>
+		<add public="1" set="method">
+			<f a="id:desc:?params:?button">
+				<c path="String"/>
+				<c path="String"/>
+				<t path="ObjectiveParams"/>
+				<t path="ButtonOptions"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Add an objective. Must be called in the `init()` function.
+	 * @param id The unique id of your objective.
+	 * @param desc The description of the objective that will be visible in the top right corner. If you have a goal value, you can display it using ::value::, ::percent::, ::value_percent:: or ::inv_percent:: in your description.
+	 * @param params The options of your objective, using the objective parameters.
+	 * @param button Options to display a simple labeled button and link it to a script function.</haxe_doc>
+		</add>
+		<getCurrentVal public="1" set="method">
+			<f a="id">
+				<c path="String"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the current value toward the objective. Must be manually set with `setCurrentVal`
+	 * @param id
+	 * @return Float</haxe_doc>
+		</getCurrentVal>
+		<setCurrentVal public="1" set="method">
+			<f a="id:val">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the current value of your objective. A goal val needs to be set and it will be visible only with the progress bar active.
+	 * @param id
+	 * @param val</haxe_doc>
+		</setCurrentVal>
+		<getGoalVal public="1" set="method">
+			<f a="id">
+				<c path="String"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the goal value that was set for your objective.
+	 * @param id
+	 * @return Float</haxe_doc>
+		</getGoalVal>
+		<setGoalVal public="1" set="method">
+			<f a="id:val">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the goal value of your objective. Goal value is either displayed either in your description if you used the proper keywords, or in the progress bar if enabled.
+	 * @param id
+	 * @param val</haxe_doc>
+		</setGoalVal>
+		<isVisible public="1" set="method">
+			<f a="id">
+				<c path="String"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Is your objective visible to player.
+	 * @param id
+	 * @return Bool</haxe_doc>
+		</isVisible>
+		<setVisible public="1" set="method">
+			<f a="id:visible">
+				<c path="String"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set your objective visible or hidden. Objectives needs to be added on init to be used. Use setVisible if you want to hide some and keep them for later.
+	 * @param id
+	 * @param visible</haxe_doc>
+		</setVisible>
+		<getStatus public="1" set="method">
+			<f a="id">
+				<c path="String"/>
+				<e path="OStatus"/>
+			</f>
+			<haxe_doc>* Get the objective status.
+	 * @param id
+	 * @return OStatus</haxe_doc>
+		</getStatus>
+		<setStatus public="1" set="method">
+			<f a="id:status">
+				<c path="String"/>
+				<e path="OStatus"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the objective status. You can have the status be updated automatically if you provide a goal value and a current value. Otherwise, you can set it yourself at any time.
+	 * @param id
+	 * @param status</haxe_doc>
+		</setStatus>
+		<getOtherPlayerVal public="1" set="method">
+			<f a="id:player">
+				<c path="String"/>
+				<c path="Player"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the current values of other players if set.
+	 * @param id
+	 * @param player
+	 * @return Float</haxe_doc>
+		</getOtherPlayerVal>
+		<setOtherPlayerVal public="1" set="method">
+			<f a="id:player:val">
+				<c path="String"/>
+				<c path="Player"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Set the current values of other players that will be visible if you enabled `showOtherPlayers` in the `ObjectiveParams`.
+	 * @param id
+	 * @param player
+	 * @param val</haxe_doc>
+		</setOtherPlayerVal>
+	</class>
+	<class path="GameState" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<time public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The current time of the game in seconds, represented in the calendar.
+	 * An ingame month is 60 seconds, a whole year is 720 seconds.
+	 * Time 0 is the beginning of March, just after winter.</haxe_doc>
+		</time>
+		<difficulty public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The difficulty of the game.
+	 * 0 is Easy, then each difficulty level increment by 1.
+	 * Can vary with decimals. Use getSelectedDifficulty() to get the difficulty chosen by the player.</haxe_doc>
+		</difficulty>
+		<zones public="1" set="null">
+			<t path="NetArray"><c path="Zone"/></t>
+			<haxe_doc>* The list of all the zones composing the map, including high sea zones</haxe_doc>
+		</zones>
+		<players public="1" set="null">
+			<t path="NetArray"><c path="Player"/></t>
+			<haxe_doc>* The list of players participating in the game.
+	 * Include the current player.</haxe_doc>
+		</players>
+		<events public="1" set="null">
+			<c path="Events"/>
+			<haxe_doc>* The events manager.
+	 * @see Events</haxe_doc>
+		</events>
+		<scriptProps public="1">
+			<d/>
+			<haxe_doc>* [HostOnly] Use this to save data</haxe_doc>
+		</scriptProps>
+		<objectives public="1" set="null">
+			<c path="ScriptObjectives"/>
+			<haxe_doc>* Interface to setup objectives visible in the UI.</haxe_doc>
+		</objectives>
+		<scriptDesc public="1">
+			<c path="String"/>
+			<haxe_doc><![CDATA[* Custom description to be displayed in the Mod Window from the Victory Condition screen.
+	 * Allow the use of some Html markups :
+	 * <font> : Change the current font. Support the following parameter :
+	 * 		- face : use a different font. override bold or italic. See FontKind for the list of fonts.
+	 * 		- color : change the text color, use Html hexadecimal. (e.g. #FF0000 for red)
+	 * 		- opacity : change the font opacity, from 0. (transparent) to 1. (opaque)
+	 * <b> or <bold> : set a font for bold text.
+	 * <i> or <italic> : set a font for italic text.
+	 * <br> : new line
+	 * <p> : define a paragraph. Support the following parameters :
+	 * 		- align : text alignment, options are "left", "center", "right", "multiline-center", "multiline-right";]]></haxe_doc>
+		</scriptDesc>
+		<isVictoryAllowed public="1" set="method">
+			<f a="kind">
+				<e path="VictoryKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Check if we allowed a victory kind
+	 * @param kind
+	 * @return Bool</haxe_doc>
+		</isVictoryAllowed>
+		<addVictory public="1" set="method">
+			<f a="kind">
+				<e path="VictoryKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Allow a VictoryKind.
+	 * @param kind</haxe_doc>
+		</addVictory>
+		<removeVictory public="1" set="method">
+			<f a="kind">
+				<e path="VictoryKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Forbid a VictoryKind.
+	 * @param kind</haxe_doc>
+		</removeVictory>
+	</class>
+	<class path="RelationCommon" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<alignment public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] Relation lost due to war. Return back to 0 over time.</haxe_doc>
+		</alignment>
+		<trade public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] Relation gained through trading.</haxe_doc>
+		</trade>
+		<warUntil public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The end date at which the war end.</haxe_doc>
+		</warUntil>
+		<lastZones public="1" set="null">
+			<t path="NetArray"><c path="Zone"/></t>
+			<haxe_doc>* The attacked zones which triggered the war.
+	 * Used to prevent restarting the war when attacking the same zone multiple times.</haxe_doc>
+		</lastZones>
+		<haxe_doc>* RelationCommon contains the current state of a relation toward a faction.
+ * The final relation value is the sum of the relation lost due to the war and the
+ * relation gained from trading.
+ * relation = alignment + trade;
+ *
+ * Relations goes from -10 (bad) to +10 (good).
+ * Giants joins your side when the relation with them reach +10.</haxe_doc>
+	</class>
+	<class path="RelationData" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<faction public="1" set="null">
+			<c path="Faction"/>
+			<haxe_doc>* The faction we established a relation with.</haxe_doc>
+		</faction>
+		<common public="1" set="null">
+			<c path="RelationCommon"/>
+			<haxe_doc>* Relation datas</haxe_doc>
+		</common>
+		<firstTime public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The time at which the relation got established with the faction.</haxe_doc>
+		</firstTime>
+		<haxe_doc>* Describe the relation between the current faction and another.</haxe_doc>
+	</class>
+	<class path="Faction" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<hiddenInPlayerList public="1">
+			<x path="Bool"/>
+			<haxe_doc>* Hide the faction from the Players list at the top-left of the screen.</haxe_doc>
+		</hiddenInPlayerList>
+		<getFactionRelation public="1" set="method">
+			<f a="with">
+				<c path="Faction"/>
+				<c path="RelationData"/>
+			</f>
+			<haxe_doc>* Get the details of a relation with a faction.
+	 * Returns null if no relations were yet to be formed.
+	 * @param with The other faction
+	 * @return RelationData</haxe_doc>
+		</getFactionRelation>
+		<getAlignment public="1" set="method">
+			<f a="with:?round" v=":true">
+				<c path="Faction"/>
+				<x path="Bool"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>{ round : true }</e></m></meta>
+			<haxe_doc>* Get the total alignment value toward a faction.
+	 * @param with The other faction
+	 * @param round [Optional] Do we want a rounded value to the lowest integer (floor)
+	 * @return Float</haxe_doc>
+		</getAlignment>
+		<outgoingTrade public="1" set="null">
+			<c path="Array"><c path="TradingPost"/></c>
+			<haxe_doc>* Any trade bringing krowns to the player in exchange of other resources.</haxe_doc>
+		</outgoingTrade>
+		<incomingTrade public="1" set="null">
+			<c path="Array"><c path="TradingPost"/></c>
+			<haxe_doc>* Any trade bringing resources to the player from others' trades.</haxe_doc>
+		</incomingTrade>
+		<haxe_doc>* A faction is the base of all groupment of units in Northgard. It includes both the players and the neutral factions like Kobolds or Giants. Factions are usually displayed in the Faction list at the top left of the screen.</haxe_doc>
+	</class>
+	<typedef path="BonusSave" params="" file="ScriptDoc.hx" module="ScriptDoc">
+		<a>
+			<unitId>
+				<x path="Null"><x path="UnitKind"/></x>
+				<meta><m n=":optional"/></meta>
+			</unitId>
+			<resId>
+				<x path="Null"><x path="ResourceKind"/></x>
+				<meta><m n=":optional"/></meta>
+			</resId>
+			<isAdvanced><x path="Bool"/></isAdvanced>
+			<id><x path="BonusKind"/></id>
+			<buildingId>
+				<x path="Null"><x path="BuildingKind"/></x>
+				<meta><m n=":optional"/></meta>
+			</buildingId>
+		</a>
+		<haxe_doc>* The data of a Conquest bonus.</haxe_doc>
+	</typedef>
+	<class path="PlayerBonus" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<get_id public="1" set="method">
+			<f a=""><x path="BonusKind"/></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_id>
+		<get_unitId public="1" set="method">
+			<f a=""><x path="Null"><x path="UnitKind"/></x></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_unitId>
+		<get_buildingId public="1" set="method">
+			<f a=""><x path="Null"><x path="BuildingKind"/></x></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_buildingId>
+		<get_resId public="1" set="method">
+			<f a=""><x path="Null"><x path="BuildingKind"/></x></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_resId>
+		<get_isAdvanced public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_isAdvanced>
+		<id public="1" get="accessor" set="null">
+			<x path="BonusKind"/>
+			<haxe_doc>* The bonus identifier.</haxe_doc>
+		</id>
+		<unitId public="1" get="accessor" set="null">
+			<x path="Null"><x path="UnitKind"/></x>
+			<haxe_doc>* The kind of unit affected by this bonus, if applicable.
+	 * Example : Skirmisher's attack power.</haxe_doc>
+		</unitId>
+		<buildingId public="1" get="accessor" set="null">
+			<x path="Null"><x path="BuildingKind"/></x>
+			<haxe_doc>* The kind of building affected by this bonus, if applicable.
+	 * Example : Free upgrade for the Training Camp.</haxe_doc>
+		</buildingId>
+		<resId public="1" get="accessor" set="null">
+			<x path="Null"><x path="BuildingKind"/></x>
+			<haxe_doc>* The kind of resource affected by this bonus, if applicable.
+	 * Example : +2 Wood.</haxe_doc>
+		</resId>
+		<isAdvanced public="1" get="accessor" set="null">
+			<x path="Bool"/>
+			<haxe_doc>* Is the bonus an advanced one, with improved values.</haxe_doc>
+		</isAdvanced>
+		<getVal public="1" set="method">
+			<f a="?id">
+				<e path="BonusValId"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Return the value of the current bonus, depending on whether it's an advanced one
+	 * @param id
+	 * @return Float</haxe_doc>
+		</getVal>
+		<getIVal public="1" set="method">
+			<f a="?id">
+				<e path="BonusValId"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* Same as `getVal` but returns an integer value
+	 * @param id
+	 * @return Int</haxe_doc>
+		</getIVal>
+		<getDesc public="1" set="method">
+			<f a="?player">
+				<c path="Player"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>* Get the formatted description of the bonus, with the right value and relative unit, building or resource when its the case.
+	 * @param player
+	 * @return String</haxe_doc>
+		</getDesc>
+	</class>
+	<class path="Player" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="Faction"/>
+		<get_isAI public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_isAI>
+		<clan public="1">
+			<x path="ClanKind"/>
+			<haxe_doc>* [HostOnly] Current clan of the player. Can be set to change the clan.
+	 * Won't remove clan specific buildings.</haxe_doc>
+		</clan>
+		<units public="1" set="null">
+			<c path="Array"><c path="Unit"/></c>
+			<haxe_doc>* All the units owned by the player, wherever they are.</haxe_doc>
+		</units>
+		<team public="1" set="null">
+			<c path="Faction"/>
+			<haxe_doc>* The team of the player, symbolised by the team leader.</haxe_doc>
+		</team>
+		<currentHappiness public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The current happiness at the beginning of the regular update.
+	 * Contrary to getHappiness(), currentHappiness stay consistent during the whole update process.</haxe_doc>
+		</currentHappiness>
+		<zones public="1" set="null">
+			<c path="Array"><c path="Zone"/></c>
+			<haxe_doc>* All the zones the player colonized, including the town hall zone.</haxe_doc>
+		</zones>
+		<feastCount public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>* The number of time the player used a feast during the game.</haxe_doc>
+		</feastCount>
+		<freeFeast public="1">
+			<x path="Int"/>
+			<haxe_doc>* [HostOnly] The number of free feasts the player currently have.
+	 * Can be used to give or take free feasts.</haxe_doc>
+		</freeFeast>
+		<freeFeastCount public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>* The number of time the player used a free feast during the game.</haxe_doc>
+		</freeFeastCount>
+		<capturedUnits public="1" set="null">
+			<c path="Array"><c path="Unit"/></c>
+			<haxe_doc>* All the units the player own but cannot control, like Sheeps.</haxe_doc>
+		</capturedUnits>
+		<discovered public="1" set="null">
+			<c path="Array"><c path="Zone"/></c>
+			<haxe_doc>* All the zones the player revealed with his scounts.</haxe_doc>
+		</discovered>
+		<isAI public="1" get="accessor" set="null">
+			<x path="Bool"/>
+			<haxe_doc>* Is the player AI controlled.</haxe_doc>
+		</isAI>
+		<bonuses public="1">
+			<c path="Array"><c path="PlayerBonus"/></c>
+			<haxe_doc>* List of bonuses that a player have.</haxe_doc>
+		</bonuses>
+		<getTownHall public="1" set="method">
+			<f a=""><c path="Building"/></f>
+			<haxe_doc>* Get the unit townhall of the player.
+	 * @return Building</haxe_doc>
+		</getTownHall>
+		<getUnit public="1" set="method">
+			<f a="kind">
+				<x path="UnitKind"/>
+				<c path="Unit"/>
+			</f>
+			<haxe_doc>* Get the first instance of UnitKind under control of a player.
+	 * Return null if none were found.
+	 * @param kind
+	 * @return Unit</haxe_doc>
+		</getUnit>
+		<getUnits public="1" set="method">
+			<f a="?kind:?zone">
+				<x path="UnitKind"/>
+				<c path="Zone"/>
+				<c path="Array"><c path="Unit"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Get all the units of a player, of a certain kind or in a zone.
+	 * Return an empty array of none were found.
+	 * @param kind The kind of units to get.
+	 * @param zone The zone where to get the units.
+	 * @return Array<Unit>]]></haxe_doc>
+		</getUnits>
+		<getSlaves public="1" set="method">
+			<f a="?kind:?zone">
+				<x path="UnitKind"/>
+				<c path="Zone"/>
+				<c path="Array"><c path="Unit"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Dragon specific, get all the slaves a player has, of a certain kind or in a zone.
+	 * Return an empty array of none were found.
+	 * @param kind The job of the slaves to get.
+	 * @param zone The zone where to get the slaves.
+	 * @return Array<Unit>]]></haxe_doc>
+		</getSlaves>
+		<getBuilding public="1" set="method">
+			<f a="kind">
+				<x path="BuildingKind"/>
+				<c path="Building"/>
+			</f>
+			<haxe_doc>* Get the first instance of a building the player has.
+	 * Return null if none were found.
+	 * @param kind The kind of building to get.
+	 * @return Building</haxe_doc>
+		</getBuilding>
+		<getBuildings public="1" set="method">
+			<f a="kind:?withConstruction:?ignoreCreator">
+				<x path="BuildingKind"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<c path="Array"><c path="Building"/></c>
+			</f>
+			<haxe_doc><![CDATA[* Get all the buildings of a certain kind.
+	 * @param kind The kind of building to get.
+	 * @param withConstruction Do we include buildings under construction.
+	 * @param ignoreCreator Do we ignore building exclusive to the player but under enemy control, like relics or the altar of kings.
+	 * @return Array<Building>]]></haxe_doc>
+		</getBuildings>
+		<getTradingPosts public="1" set="method">
+			<f a="?withConstruction" v="false">
+				<x path="Bool"/>
+				<c path="Array"><c path="TradingPost"/></c>
+			</f>
+			<meta><m n=":value"><e>{ withConstruction : false }</e></m></meta>
+			<haxe_doc><![CDATA[* Give a list of all the trading posts owned by the player.
+	 * @param withConstruction Include trading posts being built.
+	 * @return Array<TradingPost>]]></haxe_doc>
+		</getTradingPosts>
+		<discoverZone public="1" set="method">
+			<f a="zone">
+				<c path="Zone"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* [HostOnly] Try to remove the fog of war from the specified zone.
+	 * @param zone
+	 * @return Bool true if the zone was successfully discovered, else false.</haxe_doc>
+		</discoverZone>
+		<coverZone public="1" set="method">
+			<f a="zone">
+				<c path="Zone"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Restore the fog of war on the specified zone.
+	 * @param zone</haxe_doc>
+		</coverZone>
+		<hasDiscovered public="1" set="method">
+			<f a="zone">
+				<c path="Zone"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tell if the player already discovered the given zone.
+	 * @param zone
+	 * @return Bool</haxe_doc>
+		</hasDiscovered>
+		<coverAll public="1" set="method">
+			<f a="?exceptZone">
+				<c path="Zone"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Restore the fog of war for the whole map.
+	 * @param exceptZone [Optional] A zone to keep discovered.</haxe_doc>
+		</coverAll>
+		<discoverAll public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* [HostOnly] Discover the whole map for the player.</haxe_doc>
+		</discoverAll>
+		<hasDiscoveredOne public="1" set="method">
+			<f a="zones">
+				<c path="Array"><c path="Zone"/></c>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Does the player discovered at least one of the given zones.
+	 * @param zones
+	 * @return Bool</haxe_doc>
+		</hasDiscoveredOne>
+		<allowColonize public="1" set="method">
+			<f a="zone:b">
+				<c path="Zone"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Allow or forbid the playze to colonize a specific zone.
+	 * @param zone
+	 * @param b true to allow, false to forbid.</haxe_doc>
+		</allowColonize>
+		<getMilitaryCount public="1" set="method">
+			<f a="?zone:?withHeroes:?atRestOnly" v=":false:false">
+				<c path="Zone"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ atRestOnly : false, withHeroes : false }</e></m></meta>
+			<haxe_doc>* Count all the player's military units.
+	 * @param zone [Optional] Count units only in this zone
+	 * @param withHeroes [Optional] Include the Heroes in the count
+	 * @param atRestOnly [Optional] Only count military units without orders
+	 * @return Int</haxe_doc>
+		</getMilitaryCount>
+		<triggerVictory public="1" set="method">
+			<f a="kind">
+				<e path="VictoryKind"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Instantly make this player and his team win the game.
+	 * Use an existing VictoryKind for the victory reason.
+	 *
+	 * @param kind</haxe_doc>
+		</triggerVictory>
+		<customVictory public="1" set="method">
+			<f a="winReason:loseReason">
+				<c path="String"/>
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Instantly make this player and his team win the game.
+	 * @param winReason The reason the player won.
+	 * @param loseReason The reason the other players lose.</haxe_doc>
+		</customVictory>
+		<customVictoryKind public="1" set="method">
+			<f a="kind">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Instantly make this player and his team win the game from the specified kind.
+	 * This will be displayed as "You achieved a [custom kind] victory !"
+	 * @param kind The custom victory kind.</haxe_doc>
+		</customVictoryKind>
+		<defeat public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* [HostOnly] Instantly make this player lose the game.</haxe_doc>
+		</defeat>
+		<customDefeat public="1" set="method">
+			<f a="loseReason">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Instantly make this player lose the game.
+	 * @param loseReason</haxe_doc>
+		</customDefeat>
+		<addResource public="1" set="method">
+			<f a="kind:amount:?produced" v="::true">
+				<x path="ResourceKind"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ produced : true }</e></m></meta>
+			<haxe_doc><![CDATA[* [HostOnly] Immediately give an amount of a specific resource to the player.
+	 * Doesn't count into the production.
+	 * @param kind
+	 * @param amount
+	 * @param produce [Optional] true to set this resource as produced.<br/>Produced resources are counted to trigger certain benefits and count into the final statistics.<br/>Defaulted at true.]]></haxe_doc>
+		</addResource>
+		<getResource public="1" set="method">
+			<f a="kind">
+				<x path="ResourceKind"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Tell the current amount of resource owned by the player.
+	 * @param kind
+	 * @return Float</haxe_doc>
+		</getResource>
+		<setResource public="1" set="method">
+			<f a="kind:amount">
+				<x path="ResourceKind"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Set a resource to a set amount.</haxe_doc>
+		</setResource>
+		<getMax public="1" set="method">
+			<f a="kind">
+				<x path="ResourceKind"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* Tell the maximum amount of one resource the player can hold.
+	 * @param kind
+	 * @return Int</haxe_doc>
+		</getMax>
+		<getHappiness public="1" set="method">
+			<f a=""><x path="Float"/></f>
+			<haxe_doc>* Get the player's happiness at the given time.
+	 * For a more consistent happiness value during script execution, use currentHappiness
+	 * @return Float</haxe_doc>
+		</getHappiness>
+		<getAvailableWarchiefs public="1" set="method">
+			<f a=""><c path="Array"><x path="UnitKind"/></c></f>
+			<haxe_doc><![CDATA[* Gives all the unit kind used as Warchiefs for this player's clan.
+	 * @return Array<UnitKind>]]></haxe_doc>
+		</getAvailableWarchiefs>
+		<setAILevel public="1" set="method">
+			<f a="level">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* [HostOnly] Set the difficulty level of the AI of this player.
+	 * @param level
+	 * @return Bool true if the player is an IA.</haxe_doc>
+		</setAILevel>
+		<getWarchief public="1" set="method">
+			<f a=""><c path="Unit"/></f>
+			<haxe_doc>* Get the first warchief spawned in the player's army.
+	 * @return Unit The first warchief, else null.</haxe_doc>
+		</getWarchief>
+		<getWarchiefs public="1" set="method">
+			<f a=""><c path="Array"><c path="Unit"/></c></f>
+			<haxe_doc><![CDATA[* Get all the present warchiefs from the player's army.
+	 * Usefull for multiple warchiefs clans like Horse and Bear.
+	 * @return Array<Unit>]]></haxe_doc>
+		</getWarchiefs>
+		<hasBuilding public="1" set="method">
+			<f a="kind:?withConstruction:?upgraded:?withExtension:?specialCond">
+				<x path="BuildingKind"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<f a="">
+					<c path="Building"/>
+					<x path="Bool"/>
+				</f>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tell if the player possess at least one of the given kind of building.
+	 * @param kind
+	 * @param withConstruction [Optional] Do we count buildings being built
+	 * @param upgraded [Optional] Do we count upgraded buildings only
+	 * @param withExtension [Optional] Do we count buildings with extensions only (Harbour with Lighthouse)
+	 * @param specialCond [Optional] A callback for more specific test cases.
+	 * @return Bool</haxe_doc>
+		</hasBuilding>
+		<hasTech public="1" set="method">
+			<f a="tech">
+				<x path="TechKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tell if the player unlocked the specified tech.
+	 * @param tech
+	 * @return Bool</haxe_doc>
+		</hasTech>
+		<setTech public="1" set="method">
+			<f a="techs">
+				<c path="Array"><x path="TechKind"/></c>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [Obsolete] Unlock the given techs for the player.
+	 * This simply toggle the tech on/off and don't trigger effects for certain techs.
+	 * Obsolete, use unlockTech instead.
+	 * @param techs
+	 * @param isFree Is the tech added to the price calculation toward the next tech.</haxe_doc>
+		</setTech>
+		<unlockTech public="1" set="method">
+			<f a="kind:?isFree" v=":false">
+				<x path="TechKind"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ isFree : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Unlock a tech and apply any related effect.
+	 * Check for Blessing unlocks.
+	 * To use during gameplay.
+	 * @param kind
+	 * @param isFree Is the tech added to the price calculation toward the next tech.</haxe_doc>
+		</unlockTech>
+		<lockTech public="1" set="method">
+			<f a="kind:?isFree:?refund" v=":false:false">
+				<x path="TechKind"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ refund : false, isFree : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Toggle a tech off. This ask the player to purchase it again to unlock next techs.
+	 * Doesn't check for already unlocked blessings or effects.
+	 * @param kind
+	 * @param isFree Remove the tech from the unlocked free techs.
+	 * @param refund Give back the spent lore to unlock the tech, or give back a free tech if it was free.</haxe_doc>
+		</lockTech>
+		<addFreeTech public="1" set="method">
+			<f a="?amount" v="1">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ amount : 1 }</e></m></meta>
+			<haxe_doc>* [HostOnly] Add a free tech to choose to the player.
+	 * @param amount Number of free tech to give.</haxe_doc>
+		</addFreeTech>
+		<unlockedForFree public="1" set="method">
+			<f a="kind">
+				<x path="TechKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tell if a tech was unlocked for free.
+	 * Return false if the player don't have the tech at all.
+	 * @param kind
+	 * @return Bool</haxe_doc>
+		</unlockedForFree>
+		<getCooldownHero public="1" set="method">
+			<f a="kind">
+				<x path="UnitKind"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>* Get the time at which the warchief can be hired again.
+	 * @param kind
+	 * @return Float</haxe_doc>
+		</getCooldownHero>
+		<takeControl public="1" set="method">
+			<f a="zone:?alert" v=":false">
+				<c path="Zone"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ alert : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Immediately take control of the given zone.
+	 * @param zone
+	 * @param alert [Optional] Do we send an alert to the previous owner of the zone.</haxe_doc>
+		</takeControl>
+		<hasFlag public="1" set="method">
+			<f a="flag">
+				<e path="PlayerFlag"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Check if a player has a flag set.
+	 * @param flag</haxe_doc>
+		</hasFlag>
+		<setFlag public="1" set="method">
+			<f a="flag:?toSet" v=":true">
+				<e path="PlayerFlag"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ toSet : true }</e></m></meta>
+			<haxe_doc>* [HostOnly] Set or unset a player flag.
+	 * @param flag
+	 * @param toSet</haxe_doc>
+		</setFlag>
+		<hasBonus public="1" set="method">
+			<f a="id:?unitId:?buildingId:?resId">
+				<x path="BonusKind"/>
+				<x path="UnitKind"/>
+				<x path="BuildingKind"/>
+				<x path="ResourceKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Check if a player has a given bonus.
+	 * @param id
+	 * @param unitId
+	 * @param buildingId
+	 * @param resId
+	 * @return Bool</haxe_doc>
+		</hasBonus>
+		<addBonus public="1" set="method">
+			<f a="data">
+				<t path="BonusSave"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Add a Conquest bonus for a player.
+	 * Example :
+	 * addBonus({id:Bonus.BMineral, resId:Resource.Stone, isAdvanced:true});
+	 * @param data The bonus data.</haxe_doc>
+		</addBonus>
+		<removeBonus public="1" set="method">
+			<f a="id:?unitId:?buildingId:?resId">
+				<x path="BonusKind"/>
+				<x path="UnitKind"/>
+				<x path="BuildingKind"/>
+				<x path="ResourceKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Remove a Conquest bonus from a player.
+	 * @param id
+	 * @param unitId
+	 * @param buildingId
+	 * @param resId
+	 * @return Bool True if the bonus was removed, else false.</haxe_doc>
+		</removeBonus>
+		<getBonus public="1" set="method">
+			<f a="id:?unitId:?buildingId:?resId">
+				<x path="BonusKind"/>
+				<x path="UnitKind"/>
+				<x path="BuildingKind"/>
+				<x path="ResourceKind"/>
+				<c path="PlayerBonus"/>
+			</f>
+			<haxe_doc>* Return the specified bonus' data.
+	 * @param id
+	 * @param unitId
+	 * @param buildingId
+	 * @param resId
+	 * @return PlayerBonus The bonus data if found, else null.</haxe_doc>
+		</getBonus>
+		<genericNotify public="1" set="method">
+			<f a="text:?target">
+				<c path="String"/>
+				<c path="Entity"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Display a custom top left notification to the player.
+	 * @param text
+	 * @param target A target entity to pan the camera to the player click on the notification.</haxe_doc>
+		</genericNotify>
+		<addPingFlag public="1" set="method">
+			<f a="x:y:type">
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="PingFlagType"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Add a ping on the map and a flag in the world to notify of a location. Position are in world coordinates.
+	 * @param x
+	 * @param y
+	 * @param type Choose between InterestPoint or Team. InterestPoint will ping the player only, while Team will ping his whole team. Team pings have a limitation of 10 at a time.</haxe_doc>
+		</addPingFlag>
+		<equipArrows public="1" set="method">
+			<f a="arrowKind:?ignoreCooldown" v=":false">
+				<x path="AbilityKind"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":value"><e>{ ignoreCooldown : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Allow to change the type of arrow used by the trackers.
+	 * Specific to Lynx clan.
+	 * @param arrowKind
+	 * @return Bool return false if a wrong ability kind was passed.</haxe_doc>
+		</equipArrows>
+		<getActiveArrowType public="1" set="method">
+			<f a=""><x path="AbilityKind"/></f>
+			<haxe_doc>* Return the type of arrows currently used by the trackers.
+	 * Specific to Lynx clan.
+	 * @return AbilityKind</haxe_doc>
+		</getActiveArrowType>
+		<hasTrophy public="1" set="method">
+			<f a="kind">
+				<x path="AbilityKind"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tells if a hunting trophy has been unlocked.
+	 * Specific to Lynx clan.
+	 * @param kind
+	 * @return Bool</haxe_doc>
+		</hasTrophy>
+		<unlockTrophy public="1" set="method">
+			<f a="kind:?free" v=":false">
+				<x path="AbilityKind"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ free : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Try to unlock a trophy by spending resources, unless it is set as free trophy.
+	 * Specific to Lynx clan.
+	 * @param kind
+	 * @param free</haxe_doc>
+		</unlockTrophy>
+		<haxe_doc>* One of the player in a game of northgard. Can be both a human or AI player. Any player manage a clan nand own one TownHall and a territory.</haxe_doc>
+	</class>
+	<class path="BaseUnit" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="Entity"/>
+		<hitLife public="1">
+			<x path="Float"/>
+			<haxe_doc>* [HostOnly] The quantity of damage a unit received.
+	 * 0 means full health.
+	 * A hitLife of 1 is equivalent to 25 in-game health point.</haxe_doc>
+		</hitLife>
+		<maxLife public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The maximum damage a unit can take before passing away.
+	 * A maxLife of 1 is equivalent to 25 in-game health point.</haxe_doc>
+		</maxLife>
+		<life public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The remaining life of a unit after applying the damages.
+	 * A life of 1 is equivalent to 25 in-game health point.</haxe_doc>
+		</life>
+		<scriptVisible public="1">
+			<x path="Bool"/>
+			<haxe_doc>* Remove a unit from the rendering process. The units is still active and seletable.</haxe_doc>
+		</scriptVisible>
+		<die public="1" set="method">
+			<f a="?immediate:?playDeath">
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Kills the unit. Buildings will explode, while standard units can either immediately vanish or die with their animation.
+	 * @param immediate true to remove the unit from the world, false to have it play the death animation.
+	 * @param playDeath true to play the death sound of civilian units</haxe_doc>
+		</die>
+		<haxe_doc>* The first level of definition for a Unit. Hold all informations related to health points and damages.</haxe_doc>
+	</class>
+	<class path="Unit" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="BaseUnit"/>
+		<kind public="1">
+			<x path="UnitKind"/>
+			<haxe_doc>* [HostOnly] The kind of unit, define the behaviour and appearance of this unit.</haxe_doc>
+		</kind>
+		<owner public="1">
+			<c path="Player"/>
+			<haxe_doc>* [HostOnly] The player owning this unit.
+	 * Neutral units or foe don't have one.</haxe_doc>
+		</owner>
+		<team public="1" set="null">
+			<c path="Faction"/>
+			<haxe_doc>* The team the unit is part of.</haxe_doc>
+		</team>
+		<canPatrol public="1">
+			<x path="Bool"/>
+			<haxe_doc>* [HostOnly] Allow a unit to patrol in a zone. Jobless units in a friendly zones automatically
+	 * starts patrolling when out of combat.</haxe_doc>
+		</canPatrol>
+		<targetZone public="1">
+			<c path="Zone"/>
+			<haxe_doc>* [HostOnly] For foes and neutral units, make them attack the specified zone.</haxe_doc>
+		</targetZone>
+		<isFoe public="1" set="null">
+			<x path="Bool"/>
+			<haxe_doc>* Is the unit a Northgard foe, a.k.a a Wolf, Draugr, etc...</haxe_doc>
+		</isFoe>
+		<assignTo public="1" set="null">
+			<c path="Building"/>
+			<haxe_doc>* At which building is the unit assigned.</haxe_doc>
+		</assignTo>
+		<isMilitary public="1" set="null">
+			<x path="Bool"/>
+			<haxe_doc>* Is the unit military.
+	 * Military units can attack other units.</haxe_doc>
+		</isMilitary>
+		<targetPlayer public="1">
+			<c path="Player"/>
+			<haxe_doc>* [HostOnly] The player the unit is set to attack. The unit will travel to the player's territory to attack him automatically.</haxe_doc>
+		</targetPlayer>
+		<hasNoWork public="1" set="null">
+			<x path="Bool"/>
+			<haxe_doc>* Does the unit don't have any work to do.
+	 * Example : A woodcutter without woodlodge.</haxe_doc>
+		</hasNoWork>
+		<setControlable public="1" set="method">
+			<f a="b">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Allow or forbid a unit to be given orders by a player.
+	 * @param b true to allow, false to forbid</haxe_doc>
+		</setControlable>
+		<pauseJob public="1" set="method">
+			<f a="pause">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Pause or unpause a unit's job.
+	 * @param pause</haxe_doc>
+		</pauseJob>
+		<hideWeapons public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Hide the weapons of the unit. The weapons will reappear at the next attack action.</haxe_doc>
+		</hideWeapons>
+		<showDefaultWeapons public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Make the weapons visible again after a use a hideWeapons()</haxe_doc>
+		</showDefaultWeapons>
+		<moveUnit public="1" set="method">
+			<f a="x:y:?walk">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Make the unit move to the given coordinates.
+	 * @param x
+	 * @param y
+	 * @param walk true to have the unit walk instead of run, default at false.</haxe_doc>
+		</moveUnit>
+		<orientToPosSmooth public="1" set="method">
+			<f a="x:y:?nbFrames" v="::60.">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ nbFrames : 60. }</e></m></meta>
+			<haxe_doc>* [HostOnly] Turn the unit toward the given coordinates over time.
+	 * @param x
+	 * @param y
+	 * @param nbFrames [Optional] The number of frames it takes, on a 60 frames per second base, for the units to rotate toward the target.</haxe_doc>
+		</orientToPosSmooth>
+		<orientToTargetSmooth public="1" set="method">
+			<f a="target:?nbFrames" v=":60.">
+				<c path="Entity"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ nbFrames : 60. }</e></m></meta>
+			<haxe_doc>* [HostOnly] Turn the unit toward a target over time.
+	 * @param e
+	 * @param nbFrames [Optional] The number of frames it takes, on a 60 frames per second base, for the units to rotate toward the target.</haxe_doc>
+		</orientToTargetSmooth>
+		<stopJob public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* [HostOnly] Make the unit stop the current action, be it a player order or an autonomous action like fishing or harvesting.
+	 * This doesn't prevent the unit to automatically choose something else to do.</haxe_doc>
+		</stopJob>
+		<moveToZone public="1" set="method">
+			<f a="zone:canAttack:?position:?target">
+				<c path="Zone"/>
+				<x path="Bool"/>
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+				<c path="BaseUnit"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Move the unit to a specific zone.
+	 * @param zone
+	 * @param canAttack Can the unit attack or retaliate when travelling.
+	 * @param position [Optional] Target position inside the zone.
+	 * @param target [Optional] A unit or hittable building to attack once inside the zone.</haxe_doc>
+		</moveToZone>
+		<isOwner public="1" set="method">
+			<f a="p">
+				<c path="Player"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Tell if the given player is the owner of this unit.
+	 * @param p
+	 * @return Bool</haxe_doc>
+		</isOwner>
+		<haxe_doc>* A multipurpose unit. Can be either a fighting or a producting unit.</haxe_doc>
+	</class>
+	<class path="Building" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="BaseUnit"/>
+		<kind public="1">
+			<x path="BuildingKind"/>
+			<haxe_doc>* [HostOnly] The kind of building, define the role and appearance of a building.</haxe_doc>
+		</kind>
+		<oreAmount public="1" set="null">
+			<x path="Null"><x path="Float"/></x>
+			<haxe_doc>* The quantity of ore the building contains.
+	 * If the building isn't an ore deposit, will return null.</haxe_doc>
+		</oreAmount>
+		<destroy public="1" set="method">
+			<f a="?manualDestroy" v="false">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ manualDestroy : false }</e></m></meta>
+			<haxe_doc>* [HostOnly] Destroy the building, with sound and visual effect.
+	 * @param manualDestroy [Optional] True to destroy the building as it was destroyed by the owner, recovering resources and other things.</haxe_doc>
+		</destroy>
+		<remove public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* [HostOnly] Immediately remove the building without any effects</haxe_doc>
+		</remove>
+		<isActive public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Is the building active. Used for rare toggleable buildings like the Gate of Muspell or Ancient Graveyard.
+	 * @return Bool</haxe_doc>
+		</isActive>
+		<setActive public="1" set="method">
+			<f a="b">
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Set the building active. Used for rare toggleable buildings like the Gate of Muspell or Ancient Graveyard.
+	 * A building is considered active by default.
+	 * @param b</haxe_doc>
+		</setActive>
+		<quickDestroy public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* [HostOnly] Remove the building and fix the area's ground as it never existed.</haxe_doc>
+		</quickDestroy>
+		<isUpgraded public="1" set="method">
+			<f a=""><x path="Bool"/></f>
+			<haxe_doc>* Tell if the building has been upgraded.
+	 * @return Bool</haxe_doc>
+		</isUpgraded>
+		<setOreAmount public="1" set="method">
+			<f a="amount">
+				<x path="Float"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* [HostOnly] Allow to set the ore amount if the building is a natural ore deposit such as Stone or Iron.
+	 * @param amount
+	 * @return Bool true if the building is an ore deposit, else false.</haxe_doc>
+		</setOreAmount>
+		<haxe_doc>* The buildings can be either player-built or part the central building defining the role of a zone.</haxe_doc>
+	</class>
+	<class path="TradingPost" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<extends path="Building"/>
+		<roadTo public="1">
+			<c path="Faction"/>
+			<haxe_doc>*  [HostOnly] The faction this trading post is exporting to.</haxe_doc>
+		</roadTo>
+		<export public="1">
+			<x path="ResourceKind"/>
+			<haxe_doc>* [HostOnly] The exported resource.</haxe_doc>
+		</export>
+		<haxe_doc>* Controller of a trading post, to manage incoming and outgoing trades.</haxe_doc>
+	</class>
+	<class path="Events" params="" file="ScriptDoc.hx" module="ScriptDoc" interface="1">
+		<kind public="1" set="null">
+			<x path="EventKind"/>
+			<haxe_doc>* The scheduled or current event kind.
+	 * Is null if no event is scheduled.</haxe_doc>
+		</kind>
+		<start public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The start time of the current event, or the previous one if there is no event active.</haxe_doc>
+		</start>
+		<duration public="1" set="null">
+			<x path="Float"/>
+			<haxe_doc>* The duration of the current event, or the previous one if there is no event active.</haxe_doc>
+		</duration>
+		<getEndTime public="1" set="method">
+			<f a=""><x path="Float"/></f>
+			<haxe_doc>* Get the time at which the current event ends.
+	 * Return -1 if there is no event active.
+	 * @return Float</haxe_doc>
+		</getEndTime>
+		<getCurrent public="1" set="method">
+			<f a=""><x path="EventKind"/></f>
+			<haxe_doc>* Return the currently active event (Bloodmoon, Kraken Attack), or null if no event is currenly active.
+	 * @return EventKind</haxe_doc>
+		</getCurrent>
+		<setEvent public="1" set="method">
+			<f a="kind:?startIn">
+				<x path="EventKind"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* [HostOnly] Schedule an event. Will replace any existing event already schedule.
+	 * @param kind The kind of event
+	 * @param [Optional] startIn The delay before the event start, in month. Will use the event's default delay by default. Use 0 to start immediately.
+	 * @return Void</haxe_doc>
+		</setEvent>
+		<haxe_doc>* Class managing the ingame world events like Earthquakes, Rats invasion or Volcano eruptions.</haxe_doc>
+	</class>
+	<class path="Std" params="" file="D:\Projects\shiroTools\haxe\std/Std.hx" extern="1">
+		<is public="1" set="method" static="1">
+			<f a="v:t">
+				<d/>
+				<d/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>DEPRECATED. Use `Std.isOfType(v, t)` instead.
+
+		Tells if a value `v` is of the type `t`. Returns `false` if `v` or `t` are null.
+
+		If `t` is a class or interface with `@:generic` meta, the result is `false`.</haxe_doc>
+		</is>
+		<isOfType public="1" set="method" static="1">
+			<f a="v:t">
+				<d/>
+				<d/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Tells if a value `v` is of the type `t`. Returns `false` if `v` or `t` are null.
+
+		If `t` is a class or interface with `@:generic` meta, the result is `false`.</haxe_doc>
+		</isOfType>
+		<downcast public="1" params="T:S" set="method" static="1">
+			<f a="value:c">
+				<c path="downcast.T"/>
+				<x path="Class"><c path="downcast.S"/></x>
+				<c path="downcast.S"/>
+			</f>
+			<haxe_doc>Checks if object `value` is an instance of class or interface `c`.
+
+		Compiles only if the type specified by `c` can be assigned to the type
+		of `value`.
+
+		This method checks if a downcast is possible. That is, if the runtime
+		type of `value` is assignable to the type specified by `c`, `value` is
+		returned. Otherwise null is returned.
+
+		This method is not guaranteed to work with core types such as `String`,
+		`Array` and `Date`.
+
+		If `value` is null, the result is null. If `c` is null, the result is
+		unspecified.</haxe_doc>
+		</downcast>
+		<instance public="1" params="T:S" set="method" static="1">
+			<f a="value:c">
+				<c path="instance.T"/>
+				<x path="Class"><c path="instance.S"/></x>
+				<c path="instance.S"/>
+			</f>
+			<meta><m n=":deprecated"><e>"Std.instance() is deprecated. Use Std.downcast() instead."</e></m></meta>
+		</instance>
+		<string public="1" set="method" static="1">
+			<f a="s">
+				<d/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Converts any value to a String.
+
+		If `s` is of `String`, `Int`, `Float` or `Bool`, its value is returned.
+
+		If `s` is an instance of a class and that class or one of its parent classes has
+		a `toString` method, that method is called. If no such method is present, the result
+		is unspecified.
+
+		If `s` is an enum constructor without argument, the constructor's name is returned. If
+		arguments exists, the constructor's name followed by the String representations of
+		the arguments is returned.
+
+		If `s` is a structure, the field names along with their values are returned. The field order
+		and the operator separating field names and values are unspecified.
+
+		If s is null, "null" is returned.</haxe_doc>
+		</string>
+		<int public="1" set="method" static="1">
+			<f a="x">
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Converts a `Float` to an `Int`, rounded towards 0.
+
+		If `x` is outside of the signed Int32 range, or is `NaN`, `NEGATIVE_INFINITY` or `POSITIVE_INFINITY`, the result is unspecified.</haxe_doc>
+		</int>
+		<parseInt public="1" set="method" static="1">
+			<f a="x">
+				<c path="String"/>
+				<x path="Null"><x path="Int"/></x>
+			</f>
+			<haxe_doc>Converts a `String` to an `Int`.
+
+		Leading whitespaces are ignored.
+
+		If `x` starts with 0x or 0X, hexadecimal notation is recognized where the following digits may
+		contain 0-9 and A-F.
+
+		Otherwise `x` is read as decimal number with 0-9 being allowed characters. `x` may also start with
+		a - to denote a negative value.
+
+		In decimal mode, parsing continues until an invalid character is detected, in which case the
+		result up to that point is returned. For hexadecimal notation, the effect of invalid characters
+		is unspecified.
+
+		Leading 0s that are not part of the 0x/0X hexadecimal notation are ignored, which means octal
+		notation is not supported.
+
+		If `x` is null, the result is unspecified.
+		If `x` cannot be parsed as integer, the result is `null`.</haxe_doc>
+		</parseInt>
+		<parseFloat public="1" set="method" static="1">
+			<f a="x">
+				<c path="String"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Converts a `String` to a `Float`.
+
+		The parsing rules for `parseInt` apply here as well, with the exception of invalid input
+		resulting in a `NaN` value instead of null.
+
+		Additionally, decimal notation may contain a single `.` to denote the start of the fractions.</haxe_doc>
+		</parseFloat>
+		<random public="1" set="method" static="1">
+			<f a="x">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc><![CDATA[Return a random integer between 0 included and `x` excluded.
+
+		If `x <= 1`, the result is always 0.]]></haxe_doc>
+		</random>
+		<haxe_doc>The Std class provides standard methods for manipulating basic types.</haxe_doc>
+	</class>
+	<abstract path="Void" params="" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<this><x path="Void"/></this>
+		<haxe_doc>The standard `Void` type. Only `null` values can be of the type `Void`.
+
+	@see https://haxe.org/manual/types-void.html</haxe_doc>
+		<meta><m n=":coreType"/></meta>
+	</abstract>
+	<abstract path="Float" params="" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<this><x path="Float"/></this>
+		<haxe_doc><![CDATA[The standard `Float` type, this is a double-precision IEEE 64bit float.
+
+	On static targets, `null` cannot be assigned to Float. If this is necessary,
+	`Null<Float>` can be used instead.
+
+	`Std.int` converts a `Float` to an `Int`, rounded towards 0.
+	`Std.parseFloat` converts a `String` to a `Float`.
+
+	@see https://haxe.org/manual/types-basic-types.html
+	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":notNull"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<abstract path="Int" params="" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<this><x path="Int"/></this>
+		<to><icast><x path="Float"/></icast></to>
+		<haxe_doc><![CDATA[The standard `Int` type. Its precision depends on the platform.
+
+	On static targets, `null` cannot be assigned to `Int`. If this is necessary,
+	`Null<Int>` can be used instead.
+
+	`Std.int` converts a `Float` to an `Int`, rounded towards 0.
+	`Std.parseInt` converts a `String` to an `Int`.
+
+	@see https://haxe.org/manual/types-basic-types.html
+	@see https://haxe.org/manual/std-math-integer-math.html
+	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":notNull"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<abstract path="Null" params="T" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<from><icast><c path="Null.T"/></icast></from>
+		<this><x path="Null"><c path="Null.T"/></x></this>
+		<to><icast><c path="Null.T"/></icast></to>
+		<haxe_doc><![CDATA[`Null<T>` is a wrapper that can be used to make the basic types `Int`,
+	`Float` and `Bool` nullable on static targets.
+
+	If null safety is enabled, only types wrapped in `Null<T>` are nullable.
+
+	Otherwise, it has no effect on non-basic-types, but it can be useful as a way to document
+	that `null` is an acceptable value for a method argument, return value or variable.
+
+	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
+		<meta>
+			<m n=":forward"/>
+			<m n=":coreType"/>
+		</meta>
+	</abstract>
+	<abstract path="Bool" params="" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<this><x path="Bool"/></this>
+		<haxe_doc><![CDATA[The standard Boolean type, which can either be `true` or `false`.
+
+	On static targets, `null` cannot be assigned to `Bool`. If this is necessary,
+	`Null<Bool>` can be used instead.
+
+	@see https://haxe.org/manual/types-bool.html
+	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":notNull"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<abstract path="Dynamic" params="T" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<this><x path="Dynamic"><c path="Dynamic.T"/></x></this>
+		<haxe_doc>`Dynamic` is a special type which is compatible with all other types.
+
+	Use of `Dynamic` should be minimized as it prevents several compiler
+	checks and optimizations. See `Any` type for a safer alternative for
+	representing values of any type.
+
+	@see https://haxe.org/manual/types-dynamic.html</haxe_doc>
+		<meta>
+			<m n=":coreType"/>
+			<m n=":runtimeValue"/>
+		</meta>
+	</abstract>
+	<typedef path="Iterator" params="T" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<a>
+			<next set="method">
+				<f a=""><c path="Iterator.T"/></f>
+				<haxe_doc>Returns the current item of the `Iterator` and advances to the next one.
+
+		This method is not required to check `hasNext()` first. A call to this
+		method while `hasNext()` is `false` yields unspecified behavior.
+
+		On the other hand, iterators should not require a call to `hasNext()`
+		before the first call to `next()` if an element is available.</haxe_doc>
+			</next>
+			<hasNext set="method">
+				<f a=""><x path="Bool"/></f>
+				<haxe_doc>Returns `false` if the iteration is complete, `true` otherwise.
+
+		Usually iteration is considered to be complete if all elements of the
+		underlying data structure were handled through calls to `next()`. However,
+		in custom iterators any logic may be used to determine the completion
+		state.</haxe_doc>
+			</hasNext>
+		</a>
+		<haxe_doc>An `Iterator` is a structure that permits iteration over elements of type `T`.
+
+	Any class with matching `hasNext()` and `next()` fields is considered an `Iterator`
+	and can then be used e.g. in `for`-loops. This makes it easy to implement
+	custom iterators.
+
+	@see https://haxe.org/manual/lf-iterators.html</haxe_doc>
+	</typedef>
+	<typedef path="Iterable" params="T" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<a><iterator set="method"><f a=""><t path="Iterator"><c path="Iterable.T"/></t></f></iterator></a>
+		<haxe_doc>An `Iterable` is a data structure which has an `iterator()` method.
+	See `Lambda` for generic functions on iterable structures.
+
+	@see https://haxe.org/manual/lf-iterators.html</haxe_doc>
+	</typedef>
+	<typedef path="KeyValueIterator" params="K:V" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<t path="Iterator"><a>
+	<value><c path="KeyValueIterator.V"/></value>
+	<key><c path="KeyValueIterator.K"/></key>
+</a></t>
+		<haxe_doc>A `KeyValueIterator` is an `Iterator` that has a key and a value.</haxe_doc>
+	</typedef>
+	<typedef path="KeyValueIterable" params="K:V" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes">
+		<a><keyValueIterator set="method"><f a=""><t path="KeyValueIterator">
+	<c path="KeyValueIterable.K"/>
+	<c path="KeyValueIterable.V"/>
+</t></f></keyValueIterator></a>
+		<haxe_doc>A `KeyValueIterable` is a data structure which has a `keyValueIterator()`
+	method to iterate over key-value-pairs.</haxe_doc>
+	</typedef>
+	<class path="ArrayAccess" params="T" file="D:\Projects\shiroTools\haxe\std/StdTypes.hx" module="StdTypes" extern="1" interface="1"><haxe_doc>`ArrayAccess` is used to indicate a class that can be accessed using brackets.
+	The type parameter represents the type of the elements stored.
+
+	This interface should be used for externs only. Haxe does not support custom
+	array access on classes. However, array access can be implemented for
+	abstract types.
+
+	@see https://haxe.org/manual/types-abstract-array-access.html</haxe_doc></class>
+	<class path="String" params="" file="D:\Projects\shiroTools\haxe\std/String.hx" extern="1">
+		<fromCharCode public="1" set="method" static="1">
+			<f a="code">
+				<x path="Int"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the String corresponding to the character code `code`.
+
+		If `code` is negative or has another invalid value, the result is
+		unspecified.</haxe_doc>
+		</fromCharCode>
+		<length public="1" set="null">
+			<x path="Int"/>
+			<haxe_doc>The number of characters in `this` String.</haxe_doc>
+		</length>
+		<toUpperCase public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>Returns a String where all characters of `this` String are upper case.</haxe_doc>
+		</toUpperCase>
+		<toLowerCase public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>Returns a String where all characters of `this` String are lower case.</haxe_doc>
+		</toLowerCase>
+		<charAt public="1" set="method">
+			<f a="index">
+				<x path="Int"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the character at position `index` of `this` String.
+
+		If `index` is negative or exceeds `this.length`, the empty String `""`
+		is returned.</haxe_doc>
+		</charAt>
+		<charCodeAt public="1" set="method">
+			<f a="index">
+				<x path="Int"/>
+				<x path="Null"><x path="Int"/></x>
+			</f>
+			<haxe_doc>Returns the character code at position `index` of `this` String.
+
+		If `index` is negative or exceeds `this.length`, `null` is returned.
+
+		To obtain the character code of a single character, `"x".code` can be
+		used instead to inline the character code at compile time. Note that
+		this only works on String literals of length 1.</haxe_doc>
+		</charCodeAt>
+		<indexOf public="1" set="method">
+			<f a="str:?startIndex">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns the position of the leftmost occurrence of `str` within `this`
+		String.
+
+		If `startIndex` is given, the search is performed within the substring
+		of `this` String starting from `startIndex` (if `startIndex` is posivite
+		or 0) or `max(this.length + startIndex, 0)` (if `startIndex` is negative).
+
+		If `startIndex` exceeds `this.length`, -1 is returned.
+
+		Otherwise the search is performed within `this` String. In either case,
+		the returned position is relative to the beginning of `this` String.
+
+		If `str` cannot be found, -1 is returned.</haxe_doc>
+		</indexOf>
+		<lastIndexOf public="1" set="method">
+			<f a="str:?startIndex">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns the position of the rightmost occurrence of `str` within `this`
+		String.
+
+		If `startIndex` is given, the search is performed within the substring
+		of `this` String from 0 to `startIndex + str.length`. Otherwise the search
+		is performed within `this` String. In either case, the returned position
+		is relative to the beginning of `this` String.
+
+		If `str` cannot be found, -1 is returned.</haxe_doc>
+		</lastIndexOf>
+		<split public="1" set="method">
+			<f a="delimiter">
+				<c path="String"/>
+				<c path="Array"><c path="String"/></c>
+			</f>
+			<haxe_doc>Splits `this` String at each occurrence of `delimiter`.
+
+		If `this` String is the empty String `""`, the result is not consistent
+		across targets and may either be `[]` (on Js, Cpp) or `[""]`.
+
+		If `delimiter` is the empty String `""`, `this` String is split into an
+		Array of `this.length` elements, where the elements correspond to the
+		characters of `this` String.
+
+		If `delimiter` is not found within `this` String, the result is an Array
+		with one element, which equals `this` String.
+
+		If `delimiter` is null, the result is unspecified.
+
+		Otherwise, `this` String is split into parts at each occurrence of
+		`delimiter`. If `this` String starts (or ends) with `delimiter`, the
+		result `Array` contains a leading (or trailing) empty String `""` element.
+		Two subsequent delimiters also result in an empty String `""` element.</haxe_doc>
+		</split>
+		<substr public="1" set="method">
+			<f a="pos:?len">
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns `len` characters of `this` String, starting at position `pos`.
+
+		If `len` is omitted, all characters from position `pos` to the end of
+		`this` String are included.
+
+		If `pos` is negative, its value is calculated from the end of `this`
+		String by `this.length + pos`. If this yields a negative value, 0 is
+		used instead.
+
+		If the calculated position + `len` exceeds `this.length`, the characters
+		from that position to the end of `this` String are returned.
+
+		If `len` is negative, the result is unspecified.</haxe_doc>
+		</substr>
+		<substring public="1" set="method">
+			<f a="startIndex:?endIndex">
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the part of `this` String from `startIndex` to but not including `endIndex`.
+
+		If `startIndex` or `endIndex` are negative, 0 is used instead.
+
+		If `startIndex` exceeds `endIndex`, they are swapped.
+
+		If the (possibly swapped) `endIndex` is omitted or exceeds
+		`this.length`, `this.length` is used instead.
+
+		If the (possibly swapped) `startIndex` exceeds `this.length`, the empty
+		String `""` is returned.</haxe_doc>
+		</substring>
+		<toString public="1" set="method">
+			<f a=""><c path="String"/></f>
+			<haxe_doc>Returns the String itself.</haxe_doc>
+		</toString>
+		<new public="1" set="method">
+			<f a="string">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Creates a copy from a given String.</haxe_doc>
+		</new>
+		<haxe_doc>The basic String class.
+
+	A Haxe String is immutable, it is not possible to modify individual
+	characters. No method of this class changes the state of `this` String.
+
+	Strings can be constructed using the String literal syntax `"string value"`.
+
+	String can be concatenated by using the `+` operator. If an operand is not a
+	String, it is passed through `Std.string()` first.
+
+	@see https://haxe.org/manual/std-String.html</haxe_doc>
+	</class>
+	<class path="Type" params="" file="D:\Projects\shiroTools\haxe\std/Type.hx" extern="1">
+		<getClass public="1" params="T" set="method" static="1">
+			<f a="o">
+				<c path="getClass.T"/>
+				<x path="Class"><c path="getClass.T"/></x>
+			</f>
+			<haxe_doc>Returns the class of `o`, if `o` is a class instance.
+
+		If `o` is null or of a different type, null is returned.
+
+		In general, type parameter information cannot be obtained at runtime.</haxe_doc>
+		</getClass>
+		<getEnum public="1" set="method" static="1">
+			<f a="o">
+				<x path="EnumValue"/>
+				<x path="Enum"><d/></x>
+			</f>
+			<haxe_doc><![CDATA[Returns the enum of enum instance `o`.
+
+		An enum instance is the result of using an enum constructor. Given an
+		`enum Color { Red; }`, `getEnum(Red)` returns `Enum<Color>`.
+
+		If `o` is null, null is returned.
+
+		In general, type parameter information cannot be obtained at runtime.]]></haxe_doc>
+		</getEnum>
+		<getSuperClass public="1" set="method" static="1">
+			<f a="c">
+				<x path="Class"><d/></x>
+				<x path="Class"><d/></x>
+			</f>
+			<haxe_doc>Returns the super-class of class `c`.
+
+		If `c` has no super class, null is returned.
+
+		If `c` is null, the result is unspecified.
+
+		In general, type parameter information cannot be obtained at runtime.</haxe_doc>
+		</getSuperClass>
+		<getClassName public="1" set="method" static="1">
+			<f a="c">
+				<x path="Class"><d/></x>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the name of class `c`, including its path.
+
+		If `c` is inside a package, the package structure is returned dot-
+		separated, with another dot separating the class name:
+		`pack1.pack2.(...).packN.ClassName`
+		If `c` is a sub-type of a Haxe module, that module is not part of the
+		package structure.
+
+		If `c` has no package, the class name is returned.
+
+		If `c` is null, the result is unspecified.
+
+		The class name does not include any type parameters.</haxe_doc>
+		</getClassName>
+		<getEnumName public="1" set="method" static="1">
+			<f a="e">
+				<x path="Enum"><d/></x>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the name of enum `e`, including its path.
+
+		If `e` is inside a package, the package structure is returned dot-
+		separated, with another dot separating the enum name:
+		`pack1.pack2.(...).packN.EnumName`
+		If `e` is a sub-type of a Haxe module, that module is not part of the
+		package structure.
+
+		If `e` has no package, the enum name is returned.
+
+		If `e` is null, the result is unspecified.
+
+		The enum name does not include any type parameters.</haxe_doc>
+		</getEnumName>
+		<resolveClass public="1" set="method" static="1">
+			<f a="name">
+				<c path="String"/>
+				<x path="Class"><d/></x>
+			</f>
+			<haxe_doc>Resolves a class by name.
+
+		If `name` is the path of an existing class, that class is returned.
+
+		Otherwise null is returned.
+
+		If `name` is null or the path to a different type, the result is
+		unspecified.
+
+		The class name must not include any type parameters.</haxe_doc>
+		</resolveClass>
+		<resolveEnum public="1" set="method" static="1">
+			<f a="name">
+				<c path="String"/>
+				<x path="Enum"><d/></x>
+			</f>
+			<haxe_doc>Resolves an enum by name.
+
+		If `name` is the path of an existing enum, that enum is returned.
+
+		Otherwise null is returned.
+
+		If `name` is null the result is unspecified.
+
+		If `name` is the path to a different type, null is returned.
+
+		The enum name must not include any type parameters.</haxe_doc>
+		</resolveEnum>
+		<createInstance public="1" params="T" set="method" static="1">
+			<f a="cl:args">
+				<x path="Class"><c path="createInstance.T"/></x>
+				<c path="Array"><d/></c>
+				<c path="createInstance.T"/>
+			</f>
+			<haxe_doc>Creates an instance of class `cl`, using `args` as arguments to the
+		class constructor.
+
+		This function guarantees that the class constructor is called.
+
+		Default values of constructors arguments are not guaranteed to be
+		taken into account.
+
+		If `cl` or `args` are null, or if the number of elements in `args` does
+		not match the expected number of constructor arguments, or if any
+		argument has an invalid type,  or if `cl` has no own constructor, the
+		result is unspecified.
+
+		In particular, default values of constructor arguments are not
+		guaranteed to be taken into account.</haxe_doc>
+		</createInstance>
+		<createEmptyInstance public="1" params="T" set="method" static="1">
+			<f a="cl">
+				<x path="Class"><c path="createEmptyInstance.T"/></x>
+				<c path="createEmptyInstance.T"/>
+			</f>
+			<haxe_doc>Creates an instance of class `cl`.
+
+		This function guarantees that the class constructor is not called.
+
+		If `cl` is null, the result is unspecified.</haxe_doc>
+		</createEmptyInstance>
+		<createEnum public="1" params="T" set="method" static="1">
+			<f a="e:constr:?params">
+				<x path="Enum"><c path="createEnum.T"/></x>
+				<c path="String"/>
+				<c path="Array"><d/></c>
+				<c path="createEnum.T"/>
+			</f>
+			<haxe_doc>Creates an instance of enum `e` by calling its constructor `constr` with
+		arguments `params`.
+
+		If `e` or `constr` is null, or if enum `e` has no constructor named
+		`constr`, or if the number of elements in `params` does not match the
+		expected number of constructor arguments, or if any argument has an
+		invalid type, the result is unspecified.</haxe_doc>
+		</createEnum>
+		<createEnumIndex public="1" params="T" set="method" static="1">
+			<f a="e:index:?params">
+				<x path="Enum"><c path="createEnumIndex.T"/></x>
+				<x path="Int"/>
+				<c path="Array"><d/></c>
+				<c path="createEnumIndex.T"/>
+			</f>
+			<haxe_doc>Creates an instance of enum `e` by calling its constructor number
+		`index` with arguments `params`.
+
+		The constructor indices are preserved from Haxe syntax, so the first
+		declared is index 0, the next index 1 etc.
+
+		If `e` or `constr` is null, or if enum `e` has no constructor named
+		`constr`, or if the number of elements in `params` does not match the
+		expected number of constructor arguments, or if any argument has an
+		invalid type, the result is unspecified.</haxe_doc>
+		</createEnumIndex>
+		<getInstanceFields public="1" set="method" static="1">
+			<f a="c">
+				<x path="Class"><d/></x>
+				<c path="Array"><c path="String"/></c>
+			</f>
+			<haxe_doc>Returns a list of the instance fields of class `c`, including
+		inherited fields.
+
+		This only includes fields which are known at compile-time. In
+		particular, using `getInstanceFields(getClass(obj))` will not include
+		any fields which were added to `obj` at runtime.
+
+		The order of the fields in the returned Array is unspecified.
+
+		If `c` is null, the result is unspecified.</haxe_doc>
+		</getInstanceFields>
+		<getClassFields public="1" set="method" static="1">
+			<f a="c">
+				<x path="Class"><d/></x>
+				<c path="Array"><c path="String"/></c>
+			</f>
+			<haxe_doc>Returns a list of static fields of class `c`.
+
+		This does not include static fields of parent classes.
+
+		The order of the fields in the returned Array is unspecified.
+
+		If `c` is null, the result is unspecified.</haxe_doc>
+		</getClassFields>
+		<getEnumConstructs public="1" set="method" static="1">
+			<f a="e">
+				<x path="Enum"><d/></x>
+				<c path="Array"><c path="String"/></c>
+			</f>
+			<haxe_doc>Returns a list of the names of all constructors of enum `e`.
+
+		The order of the constructor names in the returned Array is preserved
+		from the original syntax.
+
+		If `e` is null, the result is unspecified.</haxe_doc>
+		</getEnumConstructs>
+		<typeof public="1" set="method" static="1">
+			<f a="v">
+				<d/>
+				<e path="ValueType"/>
+			</f>
+			<haxe_doc>Returns the runtime type of value `v`.
+
+		The result corresponds to the type `v` has at runtime, which may vary
+		per platform. Assumptions regarding this should be minimized to avoid
+		surprises.</haxe_doc>
+		</typeof>
+		<enumEq public="1" params="T" set="method" static="1">
+			<f a="a:b">
+				<c path="enumEq.T"/>
+				<c path="enumEq.T"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Recursively compares two enum instances `a` and `b` by value.
+
+		Unlike `a == b`, this function performs a deep equality check on the
+		arguments of the constructors, if exists.
+
+		If `a` or `b` are null, the result is unspecified.</haxe_doc>
+		</enumEq>
+		<enumConstructor public="1" set="method" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the constructor name of enum instance `e`.
+
+		The result String does not contain any constructor arguments.
+
+		If `e` is null, the result is unspecified.</haxe_doc>
+		</enumConstructor>
+		<enumParameters public="1" set="method" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<c path="Array"><d/></c>
+			</f>
+			<haxe_doc>Returns a list of the constructor arguments of enum instance `e`.
+
+		If `e` has no arguments, the result is [].
+
+		Otherwise the result are the values that were used as arguments to `e`,
+		in the order of their declaration.
+
+		If `e` is null, the result is unspecified.</haxe_doc>
+		</enumParameters>
+		<enumIndex public="1" set="method" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns the index of enum instance `e`.
+
+		This corresponds to the original syntactic position of `e`. The index of
+		the first declared constructor is 0, the next one is 1 etc.
+
+		If `e` is null, the result is unspecified.</haxe_doc>
+		</enumIndex>
+		<allEnums public="1" params="T" set="method" static="1">
+			<f a="e">
+				<x path="Enum"><c path="allEnums.T"/></x>
+				<c path="Array"><c path="allEnums.T"/></c>
+			</f>
+			<haxe_doc>Returns a list of all constructors of enum `e` that require no
+		arguments.
+
+		This may return the empty Array `[]` if all constructors of `e` require
+		arguments.
+
+		Otherwise an instance of `e` constructed through each of its non-
+		argument constructors is returned, in the order of the constructor
+		declaration.
+
+		If `e` is null, the result is unspecified.</haxe_doc>
+		</allEnums>
+		<haxe_doc>The Haxe Reflection API allows retrieval of type information at runtime.
+
+	This class complements the more lightweight Reflect class, with a focus on
+	class and enum instances.
+
+	@see https://haxe.org/manual/types.html
+	@see https://haxe.org/manual/std-reflection.html</haxe_doc>
+	</class>
+	<class path="haxe.EnumTools" params="" file="D:\Projects\shiroTools\haxe\std/haxe/EnumTools.hx" extern="1">
+		<getName public="1" params="T" get="inline" set="null" line="52" static="1">
+			<f a="e">
+				<x path="Enum"><c path="getName.T"/></x>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the name of enum `e`, including its path.
+
+		If `e` is inside a package, the package structure is returned dot-
+		separated, with another dot separating the enum name:
+		
+			pack1.pack2.(...).packN.EnumName
+
+		If `e` is a sub-type of a Haxe module, that module is not part of the
+		package structure.
+
+		If `e` has no package, the enum name is returned.
+
+		If `e` is `null`, the result is unspecified.
+
+		The enum name does not include any type parameters.</haxe_doc>
+		</getName>
+		<createByName public="1" params="T" get="inline" set="null" line="65" static="1">
+			<f a="e:constr:?params">
+				<x path="Enum"><c path="createByName.T"/></x>
+				<c path="String"/>
+				<c path="Array"><d/></c>
+				<c path="createByName.T"/>
+			</f>
+			<haxe_doc>Creates an instance of enum `e` by calling its constructor `constr` with
+		arguments `params`.
+
+		If `e` or `constr` is `null`, or if enum `e` has no constructor named
+		`constr`, or if the number of elements in `params` does not match the
+		expected number of constructor arguments, or if any argument has an
+		invalid type, the result is unspecified.</haxe_doc>
+		</createByName>
+		<createByIndex public="1" params="T" get="inline" set="null" line="81" static="1">
+			<f a="e:index:?params">
+				<x path="Enum"><c path="createByIndex.T"/></x>
+				<x path="Int"/>
+				<c path="Array"><d/></c>
+				<c path="createByIndex.T"/>
+			</f>
+			<haxe_doc>Creates an instance of enum `e` by calling its constructor number
+		`index` with arguments `params`.
+
+		The constructor indices are preserved from Haxe syntax, so the first
+		declared is index 0, the next index 1 etc.
+
+		If `e` or `index` is `null`, or if enum `e` has no constructor
+		corresponding to index `index`, or if the number of elements in `params`
+		does not match the expected number of constructor arguments, or if any
+		argument has an invalid type, the result is unspecified.</haxe_doc>
+		</createByIndex>
+		<createAll public="1" params="T" get="inline" set="null" line="98" static="1">
+			<f a="e">
+				<x path="Enum"><c path="createAll.T"/></x>
+				<c path="Array"><c path="createAll.T"/></c>
+			</f>
+			<haxe_doc>Returns a list of all constructors of enum `e` that require no
+		arguments.
+
+		This may return the empty Array `[]` if all constructors of `e` require
+		arguments.
+
+		Otherwise an instance of `e` constructed through each of its non-
+		argument constructors is returned, in the order of the constructor
+		declaration.
+
+		If `e` is `null`, the result is unspecified.</haxe_doc>
+		</createAll>
+		<getConstructors public="1" params="T" get="inline" set="null" line="110" static="1">
+			<f a="e">
+				<x path="Enum"><c path="getConstructors.T"/></x>
+				<c path="Array"><c path="String"/></c>
+			</f>
+			<haxe_doc>Returns a list of the names of all constructors of enum `e`.
+
+		The order of the constructor names in the returned Array is preserved
+		from the original syntax.
+
+		If `c` is `null`, the result is unspecified.</haxe_doc>
+		</getConstructors>
+		<haxe_doc>This class provides advanced methods on enums. It is ideally used with
+	`using EnumTools` and then acts as an
+	  [extension](https://haxe.org/manual/lf-static-extension.html) to the
+	  `enum` types.
+
+	If the first argument to any of the methods is `null`, the result is
+	unspecified.</haxe_doc>
+	</class>
+	<class path="haxe.EnumValueTools" params="" file="D:\Projects\shiroTools\haxe\std/haxe/EnumTools.hx" module="haxe.EnumTools" extern="1">
+		<equals public="1" params="T" get="inline" set="null" line="133" static="1">
+			<f a="a:b">
+				<c path="equals.T"/>
+				<c path="equals.T"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Recursively compares two enum instances `a` and `b` by value.
+
+		Unlike `a == b`, this function performs a deep equality check on the
+		arguments of the constructors (if there are any).
+
+		If `a` or `b` are `null`, the result is unspecified.</haxe_doc>
+		</equals>
+		<getName public="1" get="inline" set="null" line="144" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>Returns the constructor name of enum instance `e`.
+
+		The result String does not contain any constructor arguments.
+
+		If `e` is `null`, the result is unspecified.</haxe_doc>
+		</getName>
+		<getParameters public="1" get="inline" set="null" line="158" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<c path="Array"><d/></c>
+			</f>
+			<haxe_doc>Returns a list of the constructor arguments of enum instance `e`.
+
+		If `e` has no arguments, the result is `[]`.
+
+		Otherwise the result are the values that were used as arguments to `e`,
+		in the order of their declaration.
+
+		If `e` is `null`, the result is unspecified.</haxe_doc>
+		</getParameters>
+		<getIndex public="1" get="inline" set="null" line="170" static="1">
+			<f a="e">
+				<x path="EnumValue"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Returns the index of enum instance `e`.
+
+		This corresponds to the original syntactic position of `e`. The index of
+		the first declared constructor is 0, the next one is 1 etc.
+
+		If `e` is `null`, the result is unspecified.</haxe_doc>
+		</getIndex>
+		<haxe_doc>This class provides advanced methods on enum values. It is ideally used with
+	`using EnumValueTools` and then acts as an
+	  [extension](https://haxe.org/manual/lf-static-extension.html) to the
+	  `EnumValue` types.
+
+	If the first argument to any of the methods is `null`, the result is
+	unspecified.</haxe_doc>
+	</class>
+</haxe>
